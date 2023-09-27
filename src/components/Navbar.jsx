@@ -1,5 +1,5 @@
 
-import pjLogo from '../../public/pjlogo.svg'
+import pjLogo from '../assets/pjlogo.svg'
 
 const Navbar = () => {
   return (

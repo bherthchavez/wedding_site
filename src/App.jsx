@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <main className="bg-[#fef1e2]">
+      <main className="bg-[#fef1e2] h-screen">
         <Navbar />
         <Head />
         <Analytics />
