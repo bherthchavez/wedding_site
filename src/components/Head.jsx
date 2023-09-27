@@ -24,13 +24,13 @@ const Head = () => {
         </div>
 
         {/* mobile */}
-        <div className='flex sm:hidden h-screen w-full items-center'>
-          <img src={pj} className='h-[200px]' />
-          <div className='relative font-freestyle font-semibold text-[100px]'>
+        <div className='flex sm:hidden h-screen items-center px-6'>
+          <img src={pj} className='h-[170px]' />
+          <span className='relative font-freestyle font-semibold text-[100px]'>
             <span className='text-[#724526] absolute top-[-100px] tracking-wide'>aula</span>
-            <span className='text-[#292929] absolute top-[-10px] left-[50px]  text-[50px] tracking-wide font-normal opacity-40'>and</span>
-            <span className='text-[#292929] absolute top-[-5px] left-[-70px] tracking-wide'>ulbert</span>
-          </div>
+            <span className='text-[#292929] absolute top-[-10px] left-[40px]  text-[45px] tracking-wide font-normal opacity-40'>and</span>
+            <span className='text-[#292929] absolute top-[-15px] left-[-55px] tracking-wide'>ulbert</span>
+          </span>
         </div>
       </div>
     </>
