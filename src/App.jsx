@@ -14,6 +14,7 @@ function App() {
             name="description"
             content="Welcome to Our Wedding Website ^_^"
           />
+          <meta name="image" content="https://brittanychiang.com/og.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:image" content="https://designcode.io/cloud/v2/twitter.jpg" />
           <meta
