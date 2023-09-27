@@ -5,11 +5,11 @@ const Head = () => {
     <>
 
 
-      <div className='fixed top-20 left-[-280px]'>
-        <img src={pjLogo} className='w-[500px] h-[500px] opacity-5' />
+      <div className='fixed top-20 left-[-200px] sm:left-[-280px]'>
+        <img src={pjLogo} className='h-[350px] sm:h-[500px] opacity-5' />
       </div>
-      <div className='fixed bottom-10 right-[-280px]'>
-        <img src={pjLogo} className='w-[500px] h-[500px] opacity-5' />
+      <div className='fixed bottom-5 right-[-200px] sm:right-[-280px]'>
+        <img src={pjLogo} className='h-[350px] sm:h-[500px] opacity-5' />
       </div>
       <div className="max-w-[800px]  w-full h-auto sm:h-screen mx-auto text-left flex flex-col justify-center px-4">
 
