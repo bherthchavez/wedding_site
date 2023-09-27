@@ -26,11 +26,11 @@ const Head = () => {
         {/* mobile */}
         <div className='flex sm:hidden h-screen items-center px-6'>
           <img src={pj} className='h-[170px]' />
-          <span className='relative font-freestyle font-semibold text-[100px]'>
-            <span className='text-[#724526] absolute top-[-100px] tracking-wide'>aula</span>
-            <span className='text-[#292929] absolute top-[-10px] left-[40px]  text-[45px] tracking-wide font-normal opacity-40'>and</span>
-            <span className='text-[#292929] absolute top-[-15px] left-[-55px] tracking-wide'>ulbert</span>
-          </span>
+          <div className='relative font-freestyle font-semibold text-[100px]'>
+            <div className='text-[#724526] absolute top-[-100px] tracking-wide px-2'>aula</div>
+            <div className='text-[#292929] absolute top-[-10px] left-[40px]  text-[45px] tracking-wide font-normal opacity-40'>and</div>
+            <div className='text-[#292929] absolute top-[-20px] left-[-60px] tracking-wide px-2'>ulbert</div>
+          </div>
         </div>
       </div>
     </>
