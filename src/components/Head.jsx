@@ -1,37 +1,235 @@
 import pjLogo from '../assets/pjlogo.svg'
-import pj from '../assets/pj.png'
+import banner from '../assets/banner.png'
+
+import MainLogo from '../assets/Main-Logo.png'
+import { useEffect, useState } from 'react';
+
+
 const Head = () => {
+
+  const [countdownDate] = useState(new Date('12/3/2023').getTime());
+  const [state, setState] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    setInterval(() => setNewTime(), 1000);
+  });
+
+  const setNewTime = () => {
+    if (countdownDate) {
+      const currentTime = new Date().getTime();
+
+      const distanceToDate = countdownDate - currentTime;
+
+      let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24));
+      let hours = Math.floor(
+        (distanceToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      let minutes = Math.floor(
+        (distanceToDate % (1000 * 60 * 60)) / (1000 * 60),
+      );
+      let seconds = Math.floor((distanceToDate % (1000 * 60)) / 1000);
+
+      const numbersToAddZeroTo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      days = `${days}`;
+      if (numbersToAddZeroTo.includes(hours)) {
+        hours = `0${hours}`;
+      } else if (numbersToAddZeroTo.includes(minutes)) {
+        minutes = `0${minutes}`;
+      } else if (numbersToAddZeroTo.includes(seconds)) {
+        seconds = `0${seconds}`;
+      }
+
+      setState({ days: days, hours: hours, minutes, seconds });
+    }
+  };
+
+  const currentTime = new Date().getTime();
+
+  const distanceToDate = countdownDate - currentTime;
+
+
+
   return (
     <>
 
-
-      <div className='fixed top-20 left-[-200px] sm:left-[-280px]'>
-        <img src={pjLogo} className='h-[350px] sm:h-[500px] opacity-5' />
-      </div>
-      <div className='fixed bottom-5 right-[-200px] sm:right-[-280px]'>
-        <img src={pjLogo} className='h-[350px] sm:h-[500px] opacity-5' />
-      </div>
-      <div className="max-w-[800px]  w-full h-auto sm:h-screen mx-auto text-left flex flex-col justify-center px-4">
-
-        {/* Web */}
-        <div className='hidden sm:flex'>
-          <img src={pj} className='w-[300px] h-[300px]  ml-24' />
-          <div className='relative font-freestyle font-semibold text-[180px]'>
-            <span className='text-[#724526] absolute top-[-45px] tracking-wide'>aula</span>
-            <span className='text-[#292929] absolute top-[130px] left-[100px]  text-[60px] tracking-wide font-normal opacity-40'>and</span>
-            <span className='text-[#292929] absolute top-[100px] left-[-100px] tracking-wide'>ulbert</span>
-          </div>
+      <div className='bg-custom bg-local bg-center bg-cover h-screen'>
+        <div className='fixed top-20 left-[-200px] sm:left-[-280px]'>
+          <img src={pjLogo} className='h-[350px] sm:h-[500px] opacity-5' />
+        </div>
+        <div className='fixed bottom-5 right-[-200px] sm:right-[-280px]'>
+          <img src={pjLogo} className='h-[350px] sm:h-[500px] opacity-5' />
         </div>
 
-        {/* mobile */}
-        <div className='flex sm:hidden h-screen items-center pl-5'>
-          <img src={pj} className='h-[170px]' />
-          <div className='relative font-freestyle font-semibold text-[100px]'>
-            <div className='text-[#724526] absolute top-[-100px]  px-2'>aula</div>
-            <div className='text-[#292929] absolute top-[-10px] left-[40px] px-2 text-[45px]  font-normal opacity-40'>and</div>
-            <div className='text-[#292929] absolute top-[-20px] left-[-60px]  px-2'>ulbert</div>
+
+        {/* <div className="max-w-[1200px] pt-24 w-full h-auto sm:h-screen mx-auto text-left flex-col justify-center px-4 ">
+
+          <div className='flex relative items-center'>
+              <img src={banner} className='relative w-[450px] sm:w-[550px] border-[#f1f0e3] border-[10px] rounded-xl' />
+          
+
+                <div className='hidden xl:flex  w-[700px] h-[400px] bg-[#fdfaf6] absolute top-[100px] left-[500px] rounded-xl opacity-95'>
+                 
+                  <div className='flex gap-28 p-14 justify-center items-center align-middle'>
+                    <img src={MainLogo} className='w-[300px]  ' />
+                    <div className='mt-10'>
+                      <div className='text-[#b89e81]  text-left font-serif text-[26px] leading-8'>
+                        {distanceToDate< 0 ?
+                            'Wedding Day!!'
+                            :
+                        'Linggo, Disyembre  3, 2023'
+                        }
+                      </div>
+
+
+                      <div className="flex my-4  text-[#949393] justify-start gap-3 items-center font-sans text-[24px] mt-10">
+                        <div className=''>
+                          <h1>{(distanceToDate) < 0 ? '' : state.days || '0'}</h1>
+                          <p className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Araw'} </p>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '⛪' : state.hours || '00'}</h1>
+                          <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Oras'}   </div>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '👰' : state.minutes || '00'}</h1>
+                          <div className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Minuto'}  </div>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '🤵' : state.seconds || '00'}</h1>
+                          <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Segundo'}  </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div className='flex sm:hidden w-[300px] h-[400px] bg-[#fdfaf6] absolute top-[200px]  rounded-xl opacity-95'>
+
+                </div>
           </div>
-        </div>
+        </div> */}
+      
+      {/* Large Screen */}
+        <figure className='h-screen hidden sm:flex justify-center items-center mx-auto max-w-[1200px]'>
+          <div className=' sm:w-[40%]'>
+            <div className='sm:w-[115%]'>
+              <img src={banner} className='border-[#f1f0e3] border-[10px] rounded-xl' />
+            </div>
+          </div>
+          <div className='sm:w-[55%]'>
+            <div className=' bg-[#fdfaf6]   rounded-xl opacity-95'>
+              <div className='flex justify-center items-center align-middle py-5 md:py-9 lg:py-12 xl:py-20 px-3  md:px-5 lg:px-9 xl:px-10'>
+
+                <div className=''>
+                  <img src={MainLogo} className='' />
+                </div>
+
+                <div className=' ml-12'>
+                  <div className='text-[#b89e81]  text-left font-serif text-[25px] leading-8'>
+                    {distanceToDate < 0 ?
+                      'Wedding Day!!'
+                      :
+                      'Linggo, Disyembre  3, 2023'
+                    }
+                  </div>
+
+                  <div className="flex my-4  text-[#949393] justify-start gap-3 items-center font-sans text-[24px] mt-10">
+                        <div className=''>
+                          <h1>{(distanceToDate) < 0 ? '' : state.days || '0'}</h1>
+                          <p className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Araw'} </p>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '⛪' : state.hours || '00'}</h1>
+                          <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Oras'}   </div>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '👰' : state.minutes || '00'}</h1>
+                          <div className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Minuto'}  </div>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '🤵' : state.seconds || '00'}</h1>
+                          <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Segundo'}  </div>
+                        </div>
+                      </div>
+
+                </div>
+
+
+
+
+              </div>
+
+            </div>
+          </div>
+        </figure>
+
+
+        {/* Small Screen */}
+
+        <figure className='h-screen sm:hidden grid place-items-center pt-20'>
+          <div className='w-[80%] '>
+            <div className='w-[100%]'>
+              <img src={banner} className='border-[#f1f0e3] border-[10px] rounded-xl' />
+            </div>
+            <div className=''>
+            <div className=' bg-[#fdfaf6]   rounded-xl opacity-95'>
+              <div className='p-5'>
+
+                <div className='p-4'>
+                  <img src={MainLogo} className='' />
+                </div>
+
+                <div className=''>
+                  <div className='text-[#b89e81]  text-center font-serif text-[25px] leading-8 mt-7'>
+                    {distanceToDate < 0 ?
+                      'Wedding Day!!'
+                      :
+                      'Linggo, Disyembre  3, 2023'
+                    }
+                  </div>
+
+                  <div className="flex my-4  text-[#949393] justify-center gap-3 items-center font-sans text-[24px] mt-5">
+                        <div className=''>
+                          <h1>{(distanceToDate) < 0 ? '' : state.days || '0'}</h1>
+                          <p className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Araw'} </p>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '⛪' : state.hours || '00'}</h1>
+                          <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Oras'}   </div>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '👰' : state.minutes || '00'}</h1>
+                          <div className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Minuto'}  </div>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '🤵' : state.seconds || '00'}</h1>
+                          <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Segundo'}  </div>
+                        </div>
+                      </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          </div>
+        
+        
+          
+        </figure>
+
+
+
+
       </div>
     </>
   )
