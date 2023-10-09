@@ -56,20 +56,20 @@ const Navbar = () => {
 
       </div>
 
-      <div className={nav ? 'fixed z-30 left-0 top-0 w-full h-full backdrop-blur-xl bg-[#9f7648] ease-in-out duration-300 bg-opacity text-white' : 'z-30 fixed w-[70%] top-0 h-full ease-in-out duration-300  left-[-100%] text-white'}>
+      <div className={nav ? 'fixed z-30 left-0 top-0 w-full h-full backdrop-blur-xl font-serif bg-[#9f7648] ease-in-out duration-300 bg-opacity text-white' : 'z-30 fixed w-[70%] top-0 h-full ease-in-out duration-300  left-[-100%] text-white'}>
         <div className='flex h-screen '>
 
           <ul className='m-auto text-3xl'>
 
-            <li onClick={handleNav} className='p-7 cursor-pointer '>
+            <li onClick={handleNav} className='p-5 cursor-pointer '>
               Paleta ng Kulay
 
             </li>
-            <li onClick={handleNav} className='p-7 cursor-pointer  '>
+            <li onClick={handleNav} className='p-5 cursor-pointer  '>
               Iskedyul
 
             </li>
-            <li onClick={handleNav} className='p-7 cursor-pointer  '>
+            <li onClick={handleNav} className='p-5 cursor-pointer  '>
               Mga Detalye
             </li>
           </ul>
