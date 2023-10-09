@@ -56,7 +56,7 @@ const Navbar = () => {
 
       </div>
 
-      <div className={nav ? 'fixed z-30 left-0 top-0 w-full h-full backdrop-blur-xl bg-[#724526] ease-in-out duration-300 bg-opacity-[80%] text-white' : 'z-30 fixed w-[70%] top-0 h-full ease-in-out duration-300  left-[-100%] text-white'}>
+      <div className={nav ? 'fixed z-30 left-0 top-0 w-full h-full backdrop-blur-xl bg-[#9f7648] ease-in-out duration-300 bg-opacity-[80%] text-white' : 'z-30 fixed w-[70%] top-0 h-full ease-in-out duration-300  left-[-100%] text-white'}>
         <div className='flex h-screen '>
 
           <ul className='m-auto text-3xl'>
