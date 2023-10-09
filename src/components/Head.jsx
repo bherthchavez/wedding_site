@@ -118,7 +118,7 @@ const Head = () => {
         </div> */}
 
         {/* Large Screen */}
-        <figure className='h-screen hidden sm:flex justify-center items-center mx-auto max-w-[1200px]'>
+        <figure className='h-screen hidden sm:flex justify-center items-center mx-auto max-w-[1200px] pt-5'>
           <div className=' sm:w-[40%]'>
             <div className='sm:w-[115%]'>
               <img src={banner} className='border-[#f1f0e3] border-[10px] rounded-xl' />
