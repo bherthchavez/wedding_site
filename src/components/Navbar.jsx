@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="z-40 font-sans fixed flex justify-between px-4 sm:px-8 items-center top-0 w-screen h-24 text-white">
+      <div className="z-40 bg-[#9f7648] font-sans fixed flex justify-between px-4 sm:px-8 items-center top-0 w-screen h-24 text-white">
         <div className="cursor-pointer">
           <img src={pg2} alt='Logo' className='w-12 h-12' />
         </div>
