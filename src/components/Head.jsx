@@ -116,8 +116,8 @@ const Head = () => {
                 </div>
           </div>
         </div> */}
-      
-      {/* Large Screen */}
+
+        {/* Large Screen */}
         <figure className='h-screen hidden sm:flex justify-center items-center mx-auto max-w-[1200px]'>
           <div className=' sm:w-[40%]'>
             <div className='sm:w-[115%]'>
@@ -142,23 +142,23 @@ const Head = () => {
                   </div>
 
                   <div className="flex my-4  text-[#949393] justify-start gap-3 items-center font-sans text-[24px] mt-10">
-                        <div className=''>
-                          <h1>{(distanceToDate) < 0 ? '' : state.days || '0'}</h1>
-                          <p className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Araw'} </p>
-                        </div>
-                        <div className=''>
-                          <h1 className='text-center'>{(distanceToDate) < 0 ? '⛪' : state.hours || '00'}</h1>
-                          <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Oras'}   </div>
-                        </div>
-                        <div className=''>
-                          <h1 className='text-center'>{(distanceToDate) < 0 ? '👰' : state.minutes || '00'}</h1>
-                          <div className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Minuto'}  </div>
-                        </div>
-                        <div className=''>
-                          <h1 className='text-center'>{(distanceToDate) < 0 ? '🤵' : state.seconds || '00'}</h1>
-                          <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Segundo'}  </div>
-                        </div>
-                      </div>
+                    <div className=''>
+                      <h1>{(distanceToDate) < 0 ? '' : state.days || '0'}</h1>
+                      <p className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Araw'} </p>
+                    </div>
+                    <div className=''>
+                      <h1 className='text-center'>{(distanceToDate) < 0 ? '⛪' : state.hours || '00'}</h1>
+                      <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Oras'}   </div>
+                    </div>
+                    <div className=''>
+                      <h1 className='text-center'>{(distanceToDate) < 0 ? '👰' : state.minutes || '00'}</h1>
+                      <div className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Minuto'}  </div>
+                    </div>
+                    <div className=''>
+                      <h1 className='text-center'>{(distanceToDate) < 0 ? '🤵' : state.seconds || '00'}</h1>
+                      <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Segundo'}  </div>
+                    </div>
+                  </div>
 
                 </div>
 
@@ -174,13 +174,50 @@ const Head = () => {
 
         {/* Small Screen */}
 
-        <figure className='h-screen sm:hidden grid place-items-center pt-20'>
-          <div className='w-[80%] '>
-            <div className='w-[100%]'>
+        <div className='h-screen w-screen sm:hidden m-auto'>
+          <div className=' m-auto p-5'>
+            <div className='pt-24'>
               <img src={banner} className='border-[#f1f0e3] border-[10px] rounded-xl' />
             </div>
-            <div className=''>
-            <div className=' bg-[#fdfaf6]   rounded-xl opacity-95'>
+
+            <div className='absolute top-[50%] right-5   bg-[#fdfaf6]   rounded-xl opacity-90'>
+              
+              <div className='flex justify-center items-center p-4'>
+                <img src={MainLogo} className='w-44' />
+              </div>
+              <div className='px-7 mt-2'>
+                  <div className='text-[#b89e81]  text-center font-serif text-lg leading-8 '>
+                    {distanceToDate < 0 ?
+                      'Wedding Day!!'
+                      :
+                      'Linggo, Disyembre  3, 2023'
+                    }
+                  </div>
+
+                  <div className="flex pb-6 text-[#949393] justify-center gap-3 items-center font-sans text-base ">
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '' : state.days || '0'}</h1>
+                          <p className='text-xs font-light'> {(distanceToDate) < 0 ? '' : 'Araw'} </p>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '⛪' : state.hours || '00'}</h1>
+                          <div className='text-xs font-light'>{(distanceToDate) < 0 ? '' : 'Oras'}   </div>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '👰' : state.minutes || '00'}</h1>
+                          <div className='text-xs font-light'> {(distanceToDate) < 0 ? '' : 'Minuto'}  </div>
+                        </div>
+                        <div className=''>
+                          <h1 className='text-center'>{(distanceToDate) < 0 ? '🤵' : state.seconds || '00'}</h1>
+                          <div className='text-xs font-light'>{(distanceToDate) < 0 ? '' : 'Segundo'}  </div>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+
+            {/* <div className=''>
+            <div className=' bg-[#fdfaf6]   rounded-xl opacity-95 '>
               <div className='p-5'>
 
                 <div className='p-4'>
@@ -220,12 +257,12 @@ const Head = () => {
               </div>
 
             </div>
+          </div> */}
           </div>
-          </div>
-        
-        
-          
-        </figure>
+
+
+
+        </div>
 
 
 
