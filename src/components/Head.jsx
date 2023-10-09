@@ -180,7 +180,7 @@ const Head = () => {
               <img src={banner} className='border-[#f1f0e3] border-[10px] rounded-xl' />
             </div>
 
-            <div className='absolute top-[50%] right-5   bg-[#fdfaf6]   rounded-xl opacity-90'>
+            <div className='absolute top-[60%] right-5   bg-[#fdfaf6]   rounded-xl opacity-90'>
               
               <div className='flex justify-center items-center p-4'>
                 <img src={MainLogo} className='w-44' />
