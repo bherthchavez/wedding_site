@@ -175,17 +175,17 @@ const Head = () => {
         {/* Small Screen */}
 
         <div className='h-screen w-screen sm:hidden m-auto'>
-          <div className=' m-auto p-5'>
-            <div className='pt-24'>
+          <div className=' m-auto p-5 relative'>
+            <div className='pt-20'>
               <img src={banner} className='border-[#f1f0e3] border-[10px] rounded-xl' />
             </div>
 
-            <div className='absolute top-[60%] right-5   bg-[#fdfaf6]   rounded-xl opacity-90'>
+            <div className='absolute top-[80%] right-5   bg-[#fdfaf6]   rounded-xl opacity-90'>
               
               <div className='flex justify-center items-center p-4'>
                 <img src={MainLogo} className='w-44' />
               </div>
-              <div className='px-7 mt-2'>
+              <div className='px-14 mt-2'>
                   <div className='text-[#b89e81]  text-center font-serif text-lg leading-8 '>
                     {distanceToDate < 0 ?
                       'Wedding Day!!'
