@@ -35,8 +35,8 @@ const TheChuch = () => {
 
       {/* Small Screen */}
 
-      <div className='h-screen w-screen sm:hidden m-auto'>
-        <div className=' m-auto p-5 relative'>
+      <div className='h-screen w-screen sm:hidden m-auto pt-20 sm:pt-0'>
+        <div className='m-auto p-5 relative'>
           <div className=' sm:w-[40%]'>
             <div className=' '>
               <div className=' justify-center items-center align-middle py-5 md:py-9 lg:py-12 xl:py-20 px-3  md:px-5 lg:px-9 xl:px-10'>

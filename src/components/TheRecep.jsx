@@ -4,13 +4,12 @@ const TheRecep = () => {
     return (
         <>
 
-            <div className='bg-[#f1f0e3] h-screen bg-custom2 bg-local bg-center bg-cover'>
+            <div className='h-screen bg-custom2 bg-local bg-center bg-cover'>
 
                 {/* Large Screen */}
-                <figure className='h-screen hidden sm:flex  mx-auto max-w-[1200px] pt-20'>
+                <figure className='h-screen hidden sm:block mx-auto max-w-[1200px]'>
 
-                    <div className=''>
-                        <div className=' '>
+                    
                             <div className=' justify-center items-center align-middle py-10 '>
 
                                 <div className='relative'>
@@ -22,16 +21,14 @@ const TheRecep = () => {
 
                                 <div className=' ml-60 mt-12'>
                                     <div className='text-[#865635]  text-left font-sans text-[25px] leading-8'>
-                                        Alta Guia Taguig City, Philippines
+                                        Alta Guia Taguig City
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
                     <div className=''>
-                        <div className=''>
-                            <img src={Reception} className='border-[#f1f0e3] border-[10px] rounded-xl' />
+                        <div className='w-50'>
+                            <img src={Reception} />
                         </div>
                     </div>
                 </figure>
