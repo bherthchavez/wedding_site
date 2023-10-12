@@ -1,5 +1,6 @@
 
 import Church from '../assets/church_1.png'
+
 const TheChuch = () => {
   return (
     <div className='bg-[#f1f0e3] h-screen'>
@@ -47,7 +48,7 @@ const TheChuch = () => {
                   <span className='ml-20 w-[140px] h-2 bg-[#eac9a5] block'></span>
                 </div>
 
-                <div className=' mr-12 mt-6'>
+                <div className=' mr-10 mt-6'>
                   <div className='text-[#865635]  text-right font-sans text-[25px] leading-8'>
                     Nuestra Señora de Gracia Parish Church, Guadalupe Viejo, Makati City
                   </div>
