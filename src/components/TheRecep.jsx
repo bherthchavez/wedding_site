@@ -52,7 +52,7 @@ const TheRecep = () => {
                                     </div>
 
                                     <div className=' mr-12 mt-6'>
-                                        <div className='text-[#865635]  text-right font-sans text-[25px] leading-8'>
+                                        <div className='text-[#865635]  text-right font-sans text-[20px] leading-8'>
                                             Alta Guia Taguig City
                                         </div>
                                     </div>

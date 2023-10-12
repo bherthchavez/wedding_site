@@ -49,7 +49,7 @@ const TheChuch = () => {
                 </div>
 
                 <div className=' mr-10 mt-6'>
-                  <div className='text-[#865635]  text-right font-sans text-[25px] leading-8'>
+                  <div className='text-[#865635]  text-right font-sans text-[20px] leading-8'>
                     Nuestra Señora de Gracia Parish Church, Guadalupe Viejo, Makati City
                   </div>
                 </div>
