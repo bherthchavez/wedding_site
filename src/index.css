@@ -5,3 +5,6 @@
 .bg-custom {
   background-image: url("../src/assets/bg.png"); /* Update the path to your image */
 }
+.bg-custom2 {
+  background-image: url("../src/assets/bg2.png"); /* Update the path to your image */
+}
