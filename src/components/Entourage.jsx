@@ -60,7 +60,7 @@ const Entourage = () => {
                     <div className="flex flex-col gap-2">
                         <div>
                             <h3 className="font-semibold text-xl text-[#4e4e4e]">Ninong at Ninang</h3>
-                            <span className="text-xs sm:text-sm text-gray-400">Magsisilbing saksi sa aming mga panata</span>
+                            <p className="text-xs sm:text-sm text-gray-400">Magsisilbing saksi sa aming mga panata</p>
                         </div>
                         <div className="flex flex-col justify-start items-start ">
                             <div className="text-left ">
