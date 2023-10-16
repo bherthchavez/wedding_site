@@ -17,7 +17,7 @@ const Entourage = () => {
                         <h3 className="font-semibold text-xl text-[#4e4e4e]">Mga magulang ng babaeng ikakasal</h3>
                         {/* <p className="mt-1 dark:text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, fugit? Aspernatur, ullam enim, odit eaque quia rerum ipsum voluptatem consequatur ratione, doloremque debitis? Fuga labore omnis minima, quisquam delectus culpa!</p> */}
 
-                        <div className="flex flex-col justify-start items-start ">
+                        <div className="flex flex-col justify-start items-start pl-5">
                             {/* <img src="https://source.unsplash.com/150x150/?portrait?3" alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" /> */}
                             <div className="text-left ">
                                 <div className="my-2 text-[#9f7648]">
@@ -26,7 +26,7 @@ const Entourage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-start items-start ">
+                        <div className="flex flex-col justify-start items-start pl-5">
                             {/* <img src="https://source.unsplash.com/150x150/?portrait?3" alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" /> */}
                             <div className="text-left ">
                                 <div className="my-2 text-[#9f7648]">
@@ -37,9 +37,9 @@ const Entourage = () => {
                         </div>
 
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 ">
                         <h3 className="font-semibold text-xl text-[#4e4e4e]">Magulang ng lalaking ikakasal</h3>
-                        <div className="flex flex-col justify-start items-start ">
+                        <div className="flex flex-col justify-start items-start pl-5">
                             <div className="text-left ">
                                 <div className="my-2 text-[#9f7648]">
                                     <h2 className="text-xl font-semibold sm:text-xl">Aldita R. Chavez</h2>
@@ -47,7 +47,7 @@ const Entourage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-start items-start ">
+                        <div className="flex flex-col justify-start items-start pl-5">
                             <div className="text-left ">
                                 <div className="my-2 text-[#9f7648]">
                                     <h2 className="text-xl font-semibold sm:text-xl">Francisco B. Pruel</h2>
@@ -64,7 +64,7 @@ const Entourage = () => {
                         </div>
                         <div className="flex flex-col justify-start items-start ">
                             <div className="text-left ">
-                                <div className="my-2 text-[#9f7648] text-base font-medium">
+                                <div className="my-2 text-[#9f7648] text-base font-medium pl-5">
                                     <h2 className="">Mrs. Dra. Wilma Tuvillo</h2>
                                     <h2 className="">Mr. Jamison</h2>
                                     <h2 className="">Mrs. Helen Kung</h2>
