@@ -3,28 +3,28 @@ import Reception from '../assets/reception.png'
 const TheRecep = () => {
     return (
         <>
-
-            <div className='h-screen bg-custom2 bg-local bg-center bg-cover'>
+            {/* bg-custom2 bg-local bg-center bg-cover */}
+            <div className='bg-[#f1f0e3] h-screen'>
 
                 {/* Large Screen */}
                 <figure className='h-screen hidden sm:block mx-auto max-w-[1200px]'>
 
-                    
-                            <div className=' justify-center items-center align-middle py-10 '>
 
-                                <div className='relative'>
-                                    <div className='text-[#4e4e4e] ml-32 font-freestyle  text-left text-[95px] leading-[63px]'>
-                                        Lugar ng Paghahanda
-                                    </div>
-                                    <span className='ml-96 w-[200px] h-2 bg-[#eac9a5] block'></span>
-                                </div>
+                    <div className=' justify-center items-center align-middle py-10 '>
 
-                                <div className=' ml-60 mt-12'>
-                                    <div className='text-[#865635]  text-left font-sans text-[25px] leading-8'>
-                                        Alta Guia Taguig City
-                                    </div>
-                                </div>
+                        <div className='relative'>
+                            <div className='text-[#4e4e4e] ml-32 font-freestyle  text-left text-[95px] leading-[63px]'>
+                                Lugar ng Paghahanda
                             </div>
+                            <span className='ml-96 w-[200px] h-2 bg-[#eac9a5] block'></span>
+                        </div>
+
+                        <div className=' ml-60 mt-12'>
+                            <div className='text-[#865635]  text-left font-sans text-[25px] leading-8'>
+                                Alta Guia Taguig City
+                            </div>
+                        </div>
+                    </div>
 
                     <div className=''>
                         <div className='w-50'>

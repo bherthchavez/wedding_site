@@ -26,7 +26,7 @@ const TheChuch = () => {
             </div>
           </div>
         </div>
-        <div className='sm:w-[55%]'>
+        <div className='sm:w-[50%]'>
           <div className='sm:w-[110%] '>
             <img src={Church} className='border-[#f1f0e3] border-[10px] rounded-xl' />
           </div>
