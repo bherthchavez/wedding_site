@@ -66,9 +66,9 @@ const Entourage = () => {
                             <div className="text-left ">
                                 <div className="my-2 text-[#9f7648] text-base font-medium">
                                     <h2 className="">Mrs. Dra. Wilma Tuvillo</h2>
-                                    <h2 className="">Mrs. Jamison</h2>
+                                    <h2 className="">Mr. Jamison</h2>
                                     <h2 className="">Mrs. Helen Kung</h2>
-                                    <h2 className="">Mrs. Manny Kung</h2>
+                                    <h2 className="">Mr. Manny Kung</h2>
                                     <h2 className="">Mrs. Edith Suarez</h2>
                                     {/* <p className="text-xs sm:text-base text-gray-400">Ang Ina</p> */}
                                 </div>
