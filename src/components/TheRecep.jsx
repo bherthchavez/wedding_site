@@ -4,7 +4,7 @@ const TheRecep = () => {
     return (
         <>
             {/* bg-custom2 bg-local bg-center bg-cover */}
-            <div className='bg-[#f1f0e3] h-screen'>
+            <div className='bg-[#f1f0e3]'>
 
                 {/* Large Screen */}
                 <figure className='h-screen hidden sm:block mx-auto max-w-[1200px]'>
@@ -35,10 +35,9 @@ const TheRecep = () => {
 
                 {/* Small Screen */}
 
-                <div className='h-screen w-screen sm:hidden m-auto'>
-                    <div className=' m-auto p-5 relative'>
+                <div className='h-screen  sm:hidden m-auto '>
+                    <div className=' m-auto px-5 relative'>
                         <div className=' sm:w-[40%]'>
-                            <div className=' '>
                                 <div className=' justify-center items-center align-middle py-5 md:py-9 lg:py-12 xl:py-20 px-3  md:px-5 lg:px-9 xl:px-10'>
 
                                     <div className='relative'>
@@ -54,7 +53,6 @@ const TheRecep = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                         <div className=''>
                             <img src={Reception} className='border-[#f1f0e3] border-[10px] rounded-xl' />
