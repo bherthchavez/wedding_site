@@ -155,7 +155,7 @@ const Entourage = () => {
                                 <div className="my-2 text-[#9f7648] text-base font-medium ">
                                     <div className="flex flex-col">
                                         <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Yugal</p>
-                                        <h2 className="pl-2">Xyla Velasco</h2>
+                                        <h2 className="pl-2">Xyla Nicole Velasco</h2>
                                         <h2 className="pl-2">Kelvin Peñaranda </h2>
                                     </div>
                                 </div>
