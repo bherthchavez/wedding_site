@@ -165,7 +165,7 @@ const Entourage = () => {
                             <div className="text-left ">
                                 <div className="my-2 text-[#9f7648] text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Mga batang bulaklak</p>
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Munting abay</p>
                                         <h2 className="pl-2">Lyka Joyce Lazana</h2>
                                         <h2 className="pl-2">Joanna Marie Lazana</h2>
                                         <h2 className="pl-2">Aleksandrei Miles R. Alibusa</h2>
@@ -179,7 +179,7 @@ const Entourage = () => {
                             <div className="text-left ">
                                 <div className="my-2 text-[#9f7648] text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Magdadala ng singsing</p>
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Singsing</p>
                                         <h2 className="pl-2">Dwayne Godfrey R. Alibusa</h2>
                                     </div>
                                 </div>
@@ -199,7 +199,7 @@ const Entourage = () => {
                             <div className="text-left ">
                                 <div className="my-2 text-[#9f7648] text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Mga barya</p>
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Arras</p>
                                         <h2 className="pl-2">Jerome C. Proel</h2>
                                     </div>
                                 </div>
