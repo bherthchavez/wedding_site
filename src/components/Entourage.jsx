@@ -42,8 +42,8 @@ const Entourage = () => {
                     <div className="flex flex-col gap-2 ">
                         <h3 className="font-semibold text-xl text-[#4e4e4e] text-center sm:text-left">Natatanging ginoo</h3>
                         <div className="flex flex-col justify-start items-start">
-                            <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/351568247_267234302493564_688029972201520228_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFjhEUk6jMOKxtmqPLEnB00lYpk75a3m6yVimTvlrebrMtK7bhyqt6GoTviGf5WDa4YSKptlESgAXQrK30jjNRs&_nc_ohc=5t8QltYSN1wAX-f_UMO&_nc_ht=scontent.fcrk3-2.fna&oh=00_AfBu61goMqyg733NTdyYNOPvcNKujKYsYhJFBdgXZ4mNoQ&oe=65341B32" alt=""
-                                className="w-28 h-28 object-scale-down rounded-full mx-auto sm:mx-0 grayscale dark:bg-gray-500 aspect-square" />
+                            <img src="https://raw.githubusercontent.com/bherthchavez/wedding_site/main/src/assets/tibor.jpg" alt=""
+                                className="w-28 h-28 bg-auto  rounded-full mx-auto sm:mx-0 grayscale dark:bg-gray-500 aspect-square" />
                             <div className="text-left  mx-auto sm:mx-0">
                                 <div className="my-2 text-[#9f7648]">
                                     <h2 className="text-base font-semibold sm:text-lg text-center sm:text-left">Jake C. Pruel</h2>
@@ -118,6 +118,90 @@ const Entourage = () => {
                                     <h2 className="">Mr. Manny Kung</h2>
                                     <h2 className="mt-2">Mrs. Mary Jane Silverio </h2>
                                     <h2 className="">Mr. Rogel Silverio</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="flex flex-col gap-2">
+                        <div>
+                            <h3 className="font-semibold text-xl text-[#4e4e4e]">Ikalawang Pares</h3>
+                        </div>
+                        <div className="flex flex-col justify-start items-start ">
+                            <div className="text-left ">
+                                <div className="my-2 text-[#9f7648] text-base font-medium ">
+                                    <div className="flex flex-col">
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Kandila</p>
+                                        <h2 className="pl-2">Jeremei Kyrell Peña</h2>
+                                        <h2 className="pl-2">Philip Roimon Domingo  </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-start items-start ">
+                            <div className="text-left ">
+                                <div className="my-2 text-[#9f7648] text-base font-medium ">
+                                    <div className="flex flex-col">
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Belo</p>
+                                        <h2 className="pl-2">Mrs. May R. Alibusa</h2>
+                                        <h2 className="pl-2">Mr. Thomas Alexie G. Alibusa  </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-start items-start ">
+                            <div className="text-left ">
+                                <div className="my-2 text-[#9f7648] text-base font-medium ">
+                                    <div className="flex flex-col">
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Yugal</p>
+                                        <h2 className="pl-2">Xyla Velasco</h2>
+                                        <h2 className="pl-2">Kelvin Peñaranda </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-start items-start ">
+                            <div className="text-left ">
+                                <div className="my-2 text-[#9f7648] text-base font-medium ">
+                                    <div className="flex flex-col">
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Mga batang bulaklak</p>
+                                        <h2 className="pl-2">Lyka Joyce Lazana</h2>
+                                        <h2 className="pl-2">Joanna Marie Lazana</h2>
+                                        <h2 className="pl-2">Aleksandrei Miles R. Alibusa</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="hidden flex-col gap-2 sm:mt-11 sm:flex">
+                        <div className="flex flex-col justify-start items-start ">
+                            <div className="text-left ">
+                                <div className="my-2 text-[#9f7648] text-base font-medium ">
+                                    <div className="flex flex-col">
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Magdadala ng singsing</p>
+                                        <h2 className="pl-2">Dwayne Godfrey R. Alibusa</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-start items-start ">
+                            <div className="text-left ">
+                                <div className="my-2 text-[#9f7648] text-base font-medium ">
+                                    <div className="flex flex-col">
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Bibliya</p>
+                                        <h2 className="pl-2">Kevin Josh Topino</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-start items-start ">
+                            <div className="text-left ">
+                                <div className="my-2 text-[#9f7648] text-base font-medium ">
+                                    <div className="flex flex-col">
+                                        <p className="text-[#4e4e4e] font-serif text-xl italic border-b border-1 border-[#b3916a] ">Mga barya</p>
+                                        <h2 className="pl-2">Jerome C. Proel</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
