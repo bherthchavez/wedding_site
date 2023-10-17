@@ -14,7 +14,7 @@ function Schedule() {
               </div>
               <span className=' w-[200px] h-2 bg-[#eac9a5] block my-2'></span>
             </div>
-            <span className="text-xs sm:text-sm font-bold tracki uppercase dark:text-gray-400">December 3, 2023</span>
+            <span className="text-xs sm:text-sm font-bold tracki uppercase dark:text-gray-400">Disyembre 3, 2023</span>
             {/* </div> */}
           </div>
           <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9 text-[#4e4e4e] pt-10 sm:pt-0">
