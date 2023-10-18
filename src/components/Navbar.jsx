@@ -2,15 +2,17 @@
 import { useState } from 'react';
 import pg2 from '../assets/pj2.png'
 
-const Navbar = () => {
+const Navbar = (modalOpen) => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
-    setNav(!nav);
+     setNav(!nav);
   };
+
+
 
   return (
     <>
-      <div className="z-40 bg-[#9f7648] font-sans fixed flex justify-between px-4 sm:px-8 items-center top-0 w-screen h-20 text-white">
+      <div className={`z-20 bg-[#9f7648] font-sans fixed flex justify-between px-4 sm:px-8 items-center top-0 w-screen h-20 text-white`}>
         <div className="cursor-pointer">
           <img src={pg2} alt='Logo' className='w-12 h-12' />
         </div>
@@ -56,7 +58,7 @@ const Navbar = () => {
 
       </div>
 
-      <div className={nav ? 'fixed z-30 left-0 top-0 w-full h-full backdrop-blur-xl font-serif bg-[#9f7648] ease-in-out duration-300 bg-opacity text-white' : 'z-30 fixed w-[70%] top-0 h-full ease-in-out duration-300  left-[-100%] text-white'}>
+      <div className={nav ? ` ${modalOpen} fixed z-10 left-0 top-0 w-full h-full backdrop-blur-xl font-serif bg-[#9f7648] ease-in-out duration-300 bg-opacity text-white` : 'z-10 fixed w-[70%] top-0 h-full ease-in-out duration-300  left-[-100%] text-white'}>
         <div className='flex h-screen '>
 
           <ul className='m-auto text-3xl'>
