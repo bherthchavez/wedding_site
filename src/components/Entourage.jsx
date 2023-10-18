@@ -1,3 +1,7 @@
+import kyla from '../assets/kyla.jpg'
+import pam from '../assets/pam.jpg'
+import tibor from '../assets/tibor.jpg'
+
 
 const Entourage = () => {
     return (
@@ -18,7 +22,7 @@ const Entourage = () => {
                         {/* <p className="mt-1 dark:text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, fugit? Aspernatur, ullam enim, odit eaque quia rerum ipsum voluptatem consequatur ratione, doloremque debitis? Fuga labore omnis minima, quisquam delectus culpa!</p> */}
 
                         <div className="flex flex-col justify-start items-start">
-                            <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-1/309532234_10221975239269576_5161865258126204650_n.jpg?stp=dst-jpg_p200x200&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG96QZgcwAgTFD3U8DP7T1UQRkVYRIZrvVBGRVhEhmu9Xbx2uxMxVRhXkIaRz-qcUI4TkRKy4NRiIciDYrZPkPm&_nc_ohc=N5i3AWc7vdsAX_8s6_o&_nc_ht=scontent.fcrk3-1.fna&oh=00_AfBEfKYtdWlXnhIN-5exb0gAW0vtE-GKMApq3CjCANTCMw&oe=65334B23" alt=""
+                            <img src={pam} alt=""
                                 className="w-28 h-28 grayscale mx-auto sm:mx-0 rounded-full dark:bg-gray-500 aspect-square" />
                             <div className="text-left mx-auto sm:mx-0">
                                 <div className="my-2 text-[#9f7648]">
@@ -28,7 +32,7 @@ const Entourage = () => {
                             </div>
                         </div>
                         <div className="flex flex-col justify-start items-start">
-                            <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/358627618_9948937421798045_5393237543298025118_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH78WMhuOrxx2WrU93uFnVI_zOCAz2qSHD_M4IDPapIcFC_En4cynRCFMTPsC_At1na4h4kyzsJac6OMmInYZ7s&_nc_ohc=R644t18nnlMAX_nlsRl&_nc_ht=scontent.fcrk3-1.fna&oh=00_AfCuGI78e6Y-opjYiUj2O-t7xRdM1pFG_7vkAz1zULkvbQ&oe=6533EAAE" alt=""
+                            <img src={kyla} alt=""
                                 className="w-28 h-28 grayscale mx-auto sm:mx-0 rounded-full dark:bg-gray-500 aspect-square" />
                             <div className="text-left mx-auto sm:mx-0">
                                 <div className="my-2 text-[#9f7648]">
@@ -42,7 +46,7 @@ const Entourage = () => {
                     <div className="flex flex-col gap-2 ">
                         <h3 className="font-semibold text-xl text-[#4e4e4e] text-center sm:text-left">Natatanging ginoo</h3>
                         <div className="flex flex-col justify-start items-start">
-                            <img src="https://raw.githubusercontent.com/bherthchavez/wedding_site/main/src/assets/tibor.jpg" alt=""
+                            <img src={tibor} alt=""
                                 className="w-28 h-28 bg-auto  rounded-full mx-auto sm:mx-0 grayscale dark:bg-gray-500 aspect-square" />
                             <div className="text-left  mx-auto sm:mx-0">
                                 <div className="my-2 text-[#9f7648]">
