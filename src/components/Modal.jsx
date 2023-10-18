@@ -1,6 +1,6 @@
 
 // eslint-disable-next-line react/prop-types
-function Modal({ isOpen, onClose, onOk, children }) {
+function Modal({ isOpen, onOk, qaFinal, children }) {
   const showHideClassName = isOpen ? "block" : "hidden";
 
   return (
@@ -21,20 +21,17 @@ function Modal({ isOpen, onClose, onOk, children }) {
           {children}
 
           <div className="bg-white px-4 py-7  sm:px-10 flex justify-between gap-6">
-            {/* <button
-              type="button"
-              className="flex h-9 w-full justify-center px-3 sm:px-4 py-1 text-slate-700 border border-slate-300 dark:border-slate-600  hover:bg-gray-200 dark:hover:bg-gray-900 dark:active:bg-slate-800 rounded-md duration-150"
-              onClick={onClose}
-            >
-              Cancel
-            </button> */}
+           {
+            qaFinal == ''
+            &&
             <button
               type="button"
               className="h-9 w-full flex justify-center items-center rounded-md border border-transparent shadow-sm px-3 sm:px-4 py-1 bg-[#9f7648] text-base text-white hover:bg-[#866239]"
               onClick={onOk}
             >
-              Unang tanong
+              Sunod na tanong
             </button>
+           }
           </div>
         </div>
       </div>
