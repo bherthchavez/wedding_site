@@ -19,39 +19,55 @@ function App() {
   const generateID = () => {
     return Math.floor(Math.random() * 10000000000)
   }
+  const generateQuestion = () => {
+    return Math.floor(Math.random() * 2)
+  }
   const [qa, setQa] = useState({
     id: generateID(),
     nickName: '',
     finalQuestion: '',
-    answer: ''
+    answer: generateQuestion(),
+    finalAns: ''
   })
 
 
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const [finalAns, setFinalAns] = useState(false);
 
 
-  const handleModalClose = () => {
-    setIsModalOpen(false)
+  const handleModalClose = (ans) => {
+    // setIsModalOpen(false)
+
+    if (qaData[qa.answer].qAnswer == ans){
+      setFinalAns(true)
+      console.log('correct')
+    }else{
+      setFinalAns(false)
+    }
+
+    console.log(ans)
+    setQa({ ...qa, finalAns: ans })
   }
 
   const onNextQAClicked = () => {
 
     if(qa.nickName !== ''){
-      setFinalQ(qaData[0].question)
-      setQa({ ...qa, finalQuestion: qaData[0].question })
+      setFinalQ(qaData[qa.answer].question)
+      setQa({ ...qa, finalQuestion: qaData[qa.answer].question })
     }
-
+    if(qa.finalAns){
+      setIsModalOpen(false)
+    }
   }
 
   console.log(qa)
-
   const overFlowHiddem = !isModalOpen ? '' : 'overflow-hidden'
 
   return (
     <>
       <main className={`bg-[#fef1e2]  h-screen ${overFlowHiddem}`}>
 
-        <Modal isOpen={isModalOpen} onClose={handleModalClose} qaFinal={qa.finalQuestion} onOk={onNextQAClicked}>
+        <Modal isOpen={isModalOpen} onClose={handleModalClose} qaFinal={qa.finalQuestion} finalAns={qa.finalAns} onOk={onNextQAClicked}>
           <div className="bg-white p-4">
             <h2 className="text-xl font-bold my-8 text-[#724526]">
            {
@@ -86,27 +102,36 @@ function App() {
                   />
                 </div>
                 :
-                <div className="flex flex-col gap-5 font-semibold justify-center items-center sm:px-7 mb-5 sm:mb-0">
+                <div className="flex flex-col gap-5 font-semibold sm:px-7 mb-5 sm:mb-0">
+                 {
+                  qa.finalAns !== '' &&
+                 <h1 className={ finalAns ? `text-md font-semibold text-[#1e6e36]` : `text-md font-semibold text-[#e23030]`}>
+                 {
+                  finalAns 
+                  ? `Ang iyong sagot ay tama.`
+                  : `Ang iyong sagot ay mali.`
+                 }</h1>
+                 }
                   <button
-                    onClick={handleModalClose}
+                    onClick={()=> handleModalClose(qaData[qa.answer].choice1)}
                     type="button"
                     className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-start items-center rounded-sm py-1 bg-[#ffecd6] text-sm sm:text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
-                    {qaData[0].choice1}
+                    {qaData[qa.answer].choice1}
                   </button>
                   <button
-                    onClick={handleModalClose}
+                    onClick={()=> handleModalClose(qaData[qa.answer].choice2)}
                     type="button"
                     className="h-10 mx-auto w-full px-4 sm:px-10 flex justify-start items-center rounded-sm py-1 bg-[#ffecd6] text-sm sm:text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
-                   {qaData[0].choice2}
+                   {qaData[qa.answer].choice2}
                   </button>
                   <button
-                    onClick={handleModalClose}
+                    onClick={()=> handleModalClose(qaData[qa.answer].choice3)}
                     type="button"
                     className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-start items-center rounded-sm py-1 bg-[#ffecd6] text-sm sm:text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
-                  {qaData[0].choice3}
+                  {qaData[qa.answer].choice3}
                   </button>
                 </div>
             }

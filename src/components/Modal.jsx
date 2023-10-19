@@ -1,6 +1,6 @@
 
 // eslint-disable-next-line react/prop-types
-function Modal({ isOpen, onOk, qaFinal, children }) {
+function Modal({ isOpen, onOk, qaFinal, finalAns, children }) {
   const showHideClassName = isOpen ? "block" : "hidden";
 
   return (
@@ -27,6 +27,10 @@ function Modal({ isOpen, onOk, qaFinal, children }) {
             qaFinal == ''
             &&
             'Sunod na Tanong'
+           }
+
+           {
+            finalAns !=='' && `Mag Exit`
            }
            
             {/* <button
