@@ -5,8 +5,8 @@ import tibor from '../assets/tibor.jpg'
 
 const Entourage = () => {
     return (
-        <section className="bg-[#f1f0e3] py-5 sm:py-10 font-sans">
-            <div className="container flex flex-col justify-center p-8 gap-10 mx-auto md:p-8 max-w-[1200px]">
+        <section name='pamunuan' className="bg-[#f1f0e3] py-5 sm:py-10 font-sans">
+            <div  className="container flex flex-col justify-center p-8 gap-10 mx-auto md:p-8 max-w-[1200px]">
                 {/* <p className="p-2 text-sm font-medium tracki text-center uppercase">How it works</p> */}
                 {/* <h2 className="mb-12 text-4xl font-bold leadi text-center sm:text-5xl">Pamunuan</h2> */}
                 <div className='relative'>

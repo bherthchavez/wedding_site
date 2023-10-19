@@ -4,10 +4,10 @@ const TheRecep = () => {
     return (
         <>
             {/* bg-custom2 bg-local bg-center bg-cover */}
-            <div className='bg-[#f1f0e3]'>
+            <div name='paghahanda' className='bg-[#f1f0e3]'>
 
                 {/* Large Screen */}
-                <figure className='h-screen hidden sm:block mx-auto max-w-[1200px]'>
+                <figure  className='h-screen hidden sm:block mx-auto max-w-[1200px]'>
 
 
                     <div className=' justify-center items-center align-middle py-10 '>

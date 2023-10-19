@@ -3,10 +3,10 @@ import Church from '../assets/church_1.png'
 
 const TheChuch = () => {
   return (
-    <div className='bg-[#f1f0e3] h-screen'>
+    <div name='simbahan' className='bg-[#f1f0e3] h-screen'>
 
       {/* Large Screen */}
-      <figure className='h-screen hidden sm:flex justify-center items-center mx-auto max-w-[1200px] pt-5'>
+      <figure  className='h-screen hidden sm:flex justify-center items-center mx-auto max-w-[1200px] pt-5'>
         <div className=' sm:w-[40%]'>
           <div className=' '>
             <div className=' justify-center items-center align-middle py-5 md:py-9 lg:py-12 xl:py-20 px-3  md:px-5 lg:px-9 xl:px-10'>

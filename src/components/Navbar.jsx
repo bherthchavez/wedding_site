@@ -1,11 +1,12 @@
 
 import { useState } from 'react';
 import pg2 from '../assets/pj2.png'
+import { Link } from 'react-scroll';
 
 const Navbar = (modalOpen) => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
-     setNav(!nav);
+    setNav(!nav);
   };
 
 
@@ -17,16 +18,27 @@ const Navbar = (modalOpen) => {
           <img src={pg2} alt='Logo' className='w-12 h-12' />
         </div>
         <ul className="hidden md:flex gap-8">
-          <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
-            <span className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
-              Paleta ng Kulay
-            </span>
-          </li>
-          <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
-            <span className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
-              Iskedyul
-            </span>
-          </li>
+          <Link to='simbahan' smooth={true} duration={500}>
+            <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
+              <span className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                Ang Simbahan
+              </span>
+            </li>
+          </Link>
+          <Link to='paghahanda' smooth={true} duration={500}>
+            <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
+              <span className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                Lugar ng Paghahanda
+              </span>
+            </li>
+          </Link>
+          <Link to='pamunuan' smooth={true} duration={500}>
+            <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
+              <span className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                Pamunuan
+              </span>
+            </li>
+          </Link>
           <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
             <span className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
               Mga Detalye
@@ -62,18 +74,29 @@ const Navbar = (modalOpen) => {
         <div className='flex h-screen '>
 
           <ul className='m-auto text-3xl'>
+            <Link to='simbahan' smooth={true} duration={500}>
+              <li onClick={handleNav} className='p-5 cursor-pointer '>
+                Ang Simbahan
+              </li>
+            </Link>
+            <Link to='paghahanda' smooth={true} duration={500}>
+              <li onClick={handleNav} className='p-5 cursor-pointer  '>
+                Lugar ng Paghahanda
+              </li>
+            </Link>
+            <Link to='pamunuan' smooth={true} duration={500}>
+              <li onClick={handleNav} className='p-5 cursor-pointer  '>
+                Pamunuan
+              </li>
+            </Link>
+            <Link to='' smooth={true} duration={500}>
+              <li onClick={handleNav} className='p-5 cursor-pointer  '>
+                Mga Detalye
+              </li>
+            </Link>
 
-            <li onClick={handleNav} className='p-5 cursor-pointer '>
-              Paleta ng Kulay
 
-            </li>
-            <li onClick={handleNav} className='p-5 cursor-pointer  '>
-              Iskedyul
 
-            </li>
-            <li onClick={handleNav} className='p-5 cursor-pointer  '>
-              Mga Detalye
-            </li>
           </ul>
         </div>
 
