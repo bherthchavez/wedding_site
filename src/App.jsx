@@ -14,7 +14,7 @@ import { qaData } from "./qaData";
 function App() {
 
 
-  const [finalQ, setFinalQ] = useState('Bago mo makita ang buong detalye ng website, mayroon kaming dalawang tanong para sa iyo.')
+  const [finalQ, setFinalQ] = useState('Bago mo makita ang buong detalye ng kasal, mayroon kaming dalawang tanong para sa iyo.')
 
   const generateID = () => {
     return Math.floor(Math.random() * 10000000000)
@@ -67,7 +67,7 @@ function App() {
             </p>
             {
               qa.finalQuestion == '' ?
-                <div className="my-10">
+                <div className="my-7">
                   <label
                     className="block text-sm font-medium text-gray-700 "
                     htmlFor="name"
@@ -86,27 +86,27 @@ function App() {
                   />
                 </div>
                 :
-                <div className="flex flex-col gap-5 font-semibold justify-center items-center sm:px-7">
+                <div className="flex flex-col gap-5 font-semibold justify-center items-center sm:px-7 mb-5 sm:mb-0">
                   <button
                     onClick={handleModalClose}
                     type="button"
-                    className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-center items-center rounded-sm py-1 bg-[#ffecd6] text-base text-gray-600 hover:bg-[#e6ddd2]"
+                    className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-start items-center rounded-sm py-1 bg-[#ffecd6] text-sm sm:text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
                     {qaData[0].choice1}
                   </button>
                   <button
                     onClick={handleModalClose}
                     type="button"
-                    className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-center items-center rounded-sm py-1 bg-[#ffecd6] text-base text-gray-600 hover:bg-[#e6ddd2]"
+                    className="h-10 mx-auto w-full px-4 sm:px-10 flex justify-start items-center rounded-sm py-1 bg-[#ffecd6] text-sm sm:text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
-                    {qaData[0].choice2}
+                   {qaData[0].choice2}
                   </button>
                   <button
                     onClick={handleModalClose}
                     type="button"
-                    className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-center items-center rounded-sm py-1 bg-[#ffecd6] text-base text-gray-600 hover:bg-[#e6ddd2]"
+                    className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-start items-center rounded-sm py-1 bg-[#ffecd6] text-sm sm:text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
-                    {qaData[0].choice3}
+                  {qaData[0].choice3}
                   </button>
                 </div>
             }
