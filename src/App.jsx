@@ -35,8 +35,12 @@ function App() {
   }
 
   const onNextQAClicked = () => {
-    setFinalQ(qaData[0].question)
-    setQa({ ...qa, finalQuestion: qaData[0].question })
+
+    if(qa.nickName !== ''){
+      setFinalQ(qaData[0].question)
+      setQa({ ...qa, finalQuestion: qaData[0].question })
+    }
+
   }
 
   console.log(qa)
@@ -49,8 +53,16 @@ function App() {
 
         <Modal isOpen={isModalOpen} onClose={handleModalClose} qaFinal={qa.finalQuestion} onOk={onNextQAClicked}>
           <div className="bg-white p-4">
-            <h2 className="text-xl font-bold my-8 text-[#724526]">Maligayang Pagbisita sa aming website!</h2>
-            <p className=" text-gray-800 px-4 sm:px-10 my-10">
+            <h2 className="text-xl font-bold my-8 text-[#724526]">
+           {
+            qa.finalQuestion !== '' ?
+             `Kamusta ${qa.nickName}! Ito ang aming tanong.`
+             : 
+           ` Maligayang Pagbisita sa aming Website!`
+           }
+            
+            </h2>
+            <p className=" text-gray-800 px-4 sm:px-10 my-9">
               {finalQ}
             </p>
             {
@@ -74,25 +86,25 @@ function App() {
                   />
                 </div>
                 :
-                <div className="flex flex-col gap-3 justify-center items-center">
+                <div className="flex flex-col gap-5 font-semibold justify-center items-center sm:px-7">
                   <button
                     onClick={handleModalClose}
                     type="button"
-                    className="h-9  px-4 sm:px-10 flex  rounded-md border border-transparent shadow-sm  py-1 bg-[#7a6955] text-base text-white hover:bg-[#866239]"
+                    className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-center items-center rounded-sm py-1 bg-[#ffecd6] text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
                     {qaData[0].choice1}
                   </button>
                   <button
                     onClick={handleModalClose}
                     type="button"
-                    className="h-9  px-4 sm:px-10 flex  rounded-md border border-transparent shadow-sm  py-1 bg-[#7a6955] text-base text-white hover:bg-[#866239]"
+                    className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-center items-center rounded-sm py-1 bg-[#ffecd6] text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
                     {qaData[0].choice2}
                   </button>
                   <button
                     onClick={handleModalClose}
                     type="button"
-                    className="h-9  px-4 sm:px-10 flex  rounded-md border border-transparent shadow-sm  py-1 bg-[#7a6955] text-base text-white hover:bg-[#866239]"
+                    className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-center items-center rounded-sm py-1 bg-[#ffecd6] text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
                     {qaData[0].choice3}
                   </button>

@@ -20,18 +20,22 @@ function Modal({ isOpen, onOk, qaFinal, children }) {
           
           {children}
 
-          <div className="bg-white px-4 py-7  sm:px-10 flex justify-between gap-6">
+          <div className="bg-[#724526] text-[#d4bfb2] hover:bg-[#502f18]  cursor-pointer px-4 py-5  sm:px-10 flex justify-center gap-6"
+          onClick={onOk}
+          >
            {
             qaFinal == ''
             &&
-            <button
+            'Sunod na Tanong'
+           }
+           
+            {/* <button
               type="button"
-              className="h-9 w-full flex justify-center items-center rounded-md border border-transparent shadow-sm px-3 sm:px-4 py-1 bg-[#9f7648] text-base text-white hover:bg-[#866239]"
+              className="h-9 w-full flex justify-center items-center rounded-md border border-transparent shadow-sm px-3 sm:px-4 py-1 bg-[#724526] text-base text-[#d4bfb2] hover:bg-[#ddc1a1]"
               onClick={onOk}
             >
-              Sunod na tanong
-            </button>
-           }
+              
+            </button> */}
           </div>
         </div>
       </div>
