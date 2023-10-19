@@ -20,7 +20,7 @@ function App() {
     return Math.floor(Math.random() * 10000000000)
   }
   const generateQuestion = () => {
-    return Math.floor(Math.random() * 2)
+    return Math.floor(Math.random() * 4)
   }
   const [qa, setQa] = useState({
     id: generateID(),
@@ -36,16 +36,13 @@ function App() {
 
 
   const handleModalClose = (ans) => {
-    // setIsModalOpen(false)
 
     if (qaData[qa.answer].qAnswer == ans){
       setFinalAns(true)
-      console.log('correct')
     }else{
       setFinalAns(false)
     }
 
-    console.log(ans)
     setQa({ ...qa, finalAns: ans })
   }
 
@@ -60,7 +57,6 @@ function App() {
     }
   }
 
-  console.log(qa)
   const overFlowHiddem = !isModalOpen ? '' : 'overflow-hidden'
 
   return (

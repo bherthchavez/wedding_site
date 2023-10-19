@@ -30,7 +30,7 @@ function Modal({ isOpen, onOk, qaFinal, finalAns, children }) {
            }
 
            {
-            finalAns !=='' && `Mag Exit`
+            finalAns !=='' && `Tingnan ang Detalye ng Kasal`
            }
            
             {/* <button
