@@ -15,10 +15,10 @@ export const qaData = [
     },
     {
         question: 'Si Paula ay ipinanganak noong April 23, 1995? Ano ang Tagalog ng 1995?',
-        choice1: `A. Isang Libo Siyam na daan Siyamnapu at Apat`,
-        choice2: `B. Sanlibo Siyam na daan Siyamnapu't Apat`,
-        choice3: `C. Isang Libo Siyam na raan Siyamnapu't Apat`,
-        qAnswer: `C. Isang Libo Siyam na raan Siyamnapu't Apat`,
+        choice1: `A. Isang Libo Siyam na daan Siyamnapu at Lima`,
+        choice2: `B. Sanlibo Siyam na daan Siyamnapu't Lima`,
+        choice3: `C. Isang Libo Siyam na raan Siyamnapu't Lima`,
+        qAnswer: `C. Isang Libo Siyam na raan Siyamnapu't Lima`,
     },
     {
         question: 'Si Paula at Berth ay Pitong Taon na. Ano sa Espanyol ang Pito o 7?',
