@@ -88,22 +88,22 @@ const Head = () => {
                     }
                   </div>
 
-                  <div className="flex my-4  text-[#949393] justify-start gap-3 items-center font-sans text-[24px] mt-10">
+                  <div className="flex my-4  text-[#949393] justify-start gap-3 items-center text-[18px] mt-10">
                     <div className=''>
-                      <h1>{(distanceToDate) < 0 ? '' : state.days || '0'}</h1>
-                      <p className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Araw'} </p>
+                      <h1 className='text-center'>{(distanceToDate) < 0 ? '' : state.days || '0'}</h1>
+                      <p className='text-xs font-light text-center'> {(distanceToDate) < 0 ? '' : 'Araw'} </p>
                     </div>
                     <div className=''>
                       <h1 className='text-center'>{(distanceToDate) < 0 ? '⛪' : state.hours || '00'}</h1>
-                      <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Oras'}   </div>
+                      <div className='text-xs font-light'>{(distanceToDate) < 0 ? '' : 'Oras'}   </div>
                     </div>
                     <div className=''>
                       <h1 className='text-center'>{(distanceToDate) < 0 ? '👰' : state.minutes || '00'}</h1>
-                      <div className='text-sm font-light'> {(distanceToDate) < 0 ? '' : 'Minuto'}  </div>
+                      <div className='text-xs font-light'> {(distanceToDate) < 0 ? '' : 'Minuto'}  </div>
                     </div>
                     <div className=''>
                       <h1 className='text-center'>{(distanceToDate) < 0 ? '🤵' : state.seconds || '00'}</h1>
-                      <div className='text-sm font-light'>{(distanceToDate) < 0 ? '' : 'Segundo'}  </div>
+                      <div className='text-xs font-light'>{(distanceToDate) < 0 ? '' : 'Segundo'}  </div>
                     </div>
                   </div>
 

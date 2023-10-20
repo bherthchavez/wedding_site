@@ -33,22 +33,22 @@ const TheRecep = () => {
                                 <img
                                     src={Reception}
                                     alt="image 1"
-                                    className="h-full w-full object-cover"
+                                    className=" object-cover"
                                 />
                                 <img
                                     src={Reception1}
                                     alt="image 1"
-                                    className="h-full w-full object-cover"
+                                    className=" object-cover"
                                 />
                                 <img
                                     src={Reception2}
                                     alt="image 1"
-                                    className="h-full w-full object-cover"
+                                    className=" object-cover"
                                 />
                                 <img
                                     src={Reception3}
                                     alt="image 1"
-                                    className="h-full w-full object-cover"
+                                    className=" object-cover"
                                 />
 
                             </Carousel>
