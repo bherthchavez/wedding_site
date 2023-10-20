@@ -35,7 +35,7 @@ function App() {
   })
 
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
   const [finalAns, setFinalAns] = useState(false);
 
 
