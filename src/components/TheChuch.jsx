@@ -104,14 +104,14 @@ const TheChuch = () => {
               <div className=' justify-center items-center align-middle py-5 md:py-9 lg:py-12 xl:py-20 px-3  md:px-5 lg:px-9 xl:px-10'>
 
                 <div className='relative'>
-                  <div className='text-[#4e4e4e] font-freestyle  text-left text-[60px] leading-[45px] '>
+                  <div className='text-[#4e4e4e] font-freestyle  text-left text-[50px] leading-[45px] '>
                     Ang Simbahan
                   </div>
                   <span className='ml-20 w-[140px] h-2 bg-[#eac9a5] block'></span>
                 </div>
 
                 <div className=' mt-6'>
-                  <div className='text-[#865635] flex font-sans text-right text-[22px] leading-8'>
+                  <div className='text-[#c48f6c] flex font-sans text-right text-[22px] leading-8'>
                     <p className='text-3xl flex  items-start '>
                       <BiLocationPlus />
                     </p>

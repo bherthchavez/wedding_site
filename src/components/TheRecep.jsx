@@ -63,8 +63,8 @@ const TheRecep = () => {
                         </div>
 
                         <div className='ml-10 mt-12'>
-                            <div className='text-[#865635] flex text-left text-[25px] leading-8'>
-                                <p className='text-3xl flex justify-center text-[#865635] items-end pr-2'>
+                            <div className='text-[#c48f6c] flex text-left text-[25px] leading-8'>
+                                <p className='text-3xl flex justify-center text-[#c48f6c] items-end pr-2'>
                                     <ImLocation />
                                 </p>
                                 <a href='https://www.google.com/search?q=Alta+Guia+Taguig+City&sca_esv=575117049&sxsrf=AM9HkKl06QdeuN0sv0NfFEZGL6TocDXPxQ%3A1697795083424&ei=C0wyZdylGeu74-EPhfeCmAQ&ved=0ahUKEwic1-TGq4SCAxXr3TgGHYW7AEMQ4dUDCBA&uact=5&oq=Alta+Guia+Taguig+City&gs_lp=Egxnd3Mtd2l6LXNlcnAiFUFsdGEgR3VpYSBUYWd1aWcgQ2l0eTILEC4YgAQYxwEYrwEyAhAmMggQABiKBRiGAzIIEAAYigUYhgMyCBAAGIoFGIYDMhoQLhiABBjHARivARiXBRjcBBjeBBjgBNgBAUjRBFAAWABwAHgBkAEAmAGjAaABowGqAQMwLjG4AQPIAQD4AQL4AQHiAwQYACBBiAYBugYGCAEQARgU&sclient=gws-wiz-serp'
@@ -86,15 +86,15 @@ const TheRecep = () => {
                             <div className=' justify-center items-center align-middle py-5 md:py-9 lg:py-12 xl:py-20 px-3  md:px-5 lg:px-9 xl:px-10'>
 
                                 <div className='relative'>
-                                    <div className='text-[#4e4e4e] text-left text-[50px]  leading-[45px] '>
+                                    <div className='text-[#4e4e4e] text-left text-[42px]  leading-[45px] '>
                                         Lugar ng Paghahanda
                                     </div>
-                                    <span className='ml-24 w-[140px] bottom-1-0 absolute h-2 bg-[#eac9a5] block'></span>
+                                    <span className='ml-24  w-[140px] bottom-1-0 absolute h-2 bg-[#eac9a5] block'></span>
                                 </div>
 
                                 <div className='mt-8'>
-                                    <div className='text-[#865635] flex text-right justify-end text-[22px] leading-8'>
-                                        <p className='text-3xl flex justify-center items-end text-[#865635] pr-2'>
+                                    <div className='text-[#c48f6c] flex text-right justify-end text-[22px] leading-8'>
+                                        <p className='text-3xl flex justify-center items-end text-[#c48f6c] pr-2'>
                                             <ImLocation />
                                         </p>
                                         <a href='https://www.google.com/search?q=Alta+Guia+Taguig+City&sca_esv=575117049&sxsrf=AM9HkKl06QdeuN0sv0NfFEZGL6TocDXPxQ%3A1697795083424&ei=C0wyZdylGeu74-EPhfeCmAQ&ved=0ahUKEwic1-TGq4SCAxXr3TgGHYW7AEMQ4dUDCBA&uact=5&oq=Alta+Guia+Taguig+City&gs_lp=Egxnd3Mtd2l6LXNlcnAiFUFsdGEgR3VpYSBUYWd1aWcgQ2l0eTILEC4YgAQYxwEYrwEyAhAmMggQABiKBRiGAzIIEAAYigUYhgMyCBAAGIoFGIYDMhoQLhiABBjHARivARiXBRjcBBjeBBjgBNgBAUjRBFAAWABwAHgBkAEAmAGjAaABowGqAQMwLjG4AQPIAQD4AQL4AQHiAwQYACBBiAYBugYGCAEQARgU&sclient=gws-wiz-serp'

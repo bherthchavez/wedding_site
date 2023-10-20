@@ -141,7 +141,7 @@ const Entourage = () => {
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl   font-semibold">Kandila</p>
+                                        <p className="text-[#9f7648] text-base   font-semibold">Kandila</p>
                                         <h2 className="pl-2">Jeremei Kyrell Peña</h2>
                                         <h2 className="pl-2">Philip Roimon Domingo  </h2>
                                     </div>
@@ -152,7 +152,7 @@ const Entourage = () => {
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl  font-semibold">Belo</p>
+                                        <p className="text-[#9f7648] text-base  font-semibold">Belo</p>
                                         <h2 className="pl-2">Mrs. May R. Alibusa</h2>
                                         <h2 className="pl-2">Mr. Thomas Alexie G. Alibusa  </h2>
                                     </div>
@@ -163,7 +163,7 @@ const Entourage = () => {
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl font-semibold  ">Yugal</p>
+                                        <p className="text-[#9f7648] text-base font-semibold  ">Yugal</p>
                                         <h2 className="pl-2">Xyla Nicole Velasco</h2>
                                         <h2 className="pl-2">Kelvin Peñaranda </h2>
                                     </div>
@@ -174,7 +174,7 @@ const Entourage = () => {
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl  font-semibold ">Munting Abay</p>
+                                        <p className="text-[#9f7648] text-base  font-semibold ">Munting Abay</p>
                                         <h2 className="pl-2">Lyka Joyce Lazana</h2>
                                         <h2 className="pl-2">Joanna Marie Lazana</h2>
                                         <h2 className="pl-2">Aleksandrei Miles R. Alibusa</h2>
@@ -187,7 +187,7 @@ const Entourage = () => {
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl  font-semibold ">Singsing</p>
+                                        <p className="text-[#9f7648] text-base  font-semibold ">Singsing</p>
                                         <h2 className="pl-2">Dwayne Godfrey R. Alibusa</h2>
                                     </div>
                                 </div>
@@ -197,7 +197,7 @@ const Entourage = () => {
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl font-semibold  ">Bibliya</p>
+                                        <p className="text-[#9f7648] text-base font-semibold  ">Bibliya</p>
                                         <h2 className="pl-2">Kevin Josh Topino</h2>
                                     </div>
                                 </div>
@@ -207,7 +207,7 @@ const Entourage = () => {
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl font-semibold  ">Arras</p>
+                                        <p className="text-[#9f7648] text-base font-semibold  ">Arras</p>
                                         <h2 className="pl-2">Jerome C. Proel</h2>
                                     </div>
                                 </div>
@@ -215,12 +215,12 @@ const Entourage = () => {
                         </div>
 
                     </div>
-                    <div className="hidden flex-col gap-2 sm:flex  items-center sm:mt-20">
+                    <div className="hidden flex-col gap-5 sm:flex  items-center sm:mt-20">
                         <div className="flex flex-col justify-center items-center sm:mt-16">
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl  font-semibold ">Singsing</p>
+                                        <p className="text-[#9f7648] text-base  font-semibold ">Singsing</p>
                                         <h2 className="pl-2">Dwayne Godfrey R. Alibusa</h2>
                                     </div>
                                 </div>
@@ -230,7 +230,7 @@ const Entourage = () => {
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl  font-semibold ">Bibliya</p>
+                                        <p className="text-[#9f7648] text-base  font-semibold ">Bibliya</p>
                                         <h2 className="pl-2">Kevin Josh Topino</h2>
                                     </div>
                                 </div>
@@ -240,7 +240,7 @@ const Entourage = () => {
                             <div className="text-center ">
                                 <div className="my-2 text-gray-600 text-base font-medium ">
                                     <div className="flex flex-col">
-                                        <p className="text-[#9f7648] text-xl font-semibold  ">Arras</p>
+                                        <p className="text-[#9f7648] text-base font-semibold  ">Arras</p>
                                         <h2 className="pl-2">Jerome C. Proel</h2>
                                     </div>
                                 </div>
