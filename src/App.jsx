@@ -1,3 +1,4 @@
+
 import Head from "./components/Head"
 import Navbar from "./components/Navbar"
 import { Analytics } from '@vercel/analytics/react';
@@ -9,10 +10,11 @@ import Entourage from "./components/Entourage";
 import { useState } from "react";
 import Modal from "./components/Modal";
 import { qaData } from "./qaData";
+import firebase from "./firebase";
+
 
 
 function App() {
-
 
   const [finalQ, setFinalQ] = useState('Bago mo makita ang buong detalye ng kasal, mayroon kaming dalawang tanong para sa iyo.')
 
@@ -27,13 +29,33 @@ function App() {
     nickName: '',
     finalQuestion: '',
     answer: generateQuestion(),
-    finalAns: ''
+    qAnswer: '',
+    finalAns: '',
+    checkAnswer: ''
   })
 
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [finalAns, setFinalAns] = useState(false);
 
+
+  const addQA = () => {
+      firebase
+      .firestore().collection('visitors')
+      .add({
+        name: qa.nickName,
+        finalQuestion: qa.finalQuestion,
+        answer: qa.answer,
+        qAnswer: qa.qAnswer,
+        finalAns: qa.finalAns,
+        checkAnswer:finalAns ? 'Tama' : 'Mali'
+      })
+      .then(() => {
+        console.log('QA SAVED!')
+      }).catch((error) => {
+        console.log(error.message)
+      });
+  };
 
   const handleModalClose = (ans) => {
 
@@ -50,10 +72,11 @@ function App() {
 
     if(qa.nickName !== ''){
       setFinalQ(qaData[qa.answer].question)
-      setQa({ ...qa, finalQuestion: qaData[qa.answer].question })
+      setQa({ ...qa, finalQuestion: qaData[qa.answer].question, qAnswer: qaData[qa.answer].qAnswer })
     }
     if(qa.finalAns){
       setIsModalOpen(false)
+      addQA()
     }
   }
 
@@ -61,7 +84,7 @@ function App() {
 
   return (
     <>
-      <main className={`bg-[#fef1e2]  h-screen ${overFlowHiddem}`}>
+      <main className={`bg-[#fef1e2] h-screen ${overFlowHiddem}`}>
 
         <Modal isOpen={isModalOpen} onClose={handleModalClose} qaFinal={qa.finalQuestion} finalAns={qa.finalAns} onOk={onNextQAClicked}>
           <div className="bg-white p-4">

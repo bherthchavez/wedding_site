@@ -1,20 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-
 // eslint-disable-next-line no-undef
-const defaultTheme = require('tailwindcss/defaultTheme');
-
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+const withMT = require("@material-tailwind/react/utils/withMT");
+ 
+// eslint-disable-next-line no-undef
+module.exports = withMT({
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-
-      fontFamily: {
-        freestyle: ['freestyle script', ...defaultTheme.fontFamily.sans]
-      }
+    extend: {},
+    fontFamily: {
+      sans: ["Open Sans", "sans-serif"],
     },
   },
   plugins: [],
-}
+});

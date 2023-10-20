@@ -10,7 +10,7 @@ const Entourage = () => {
                 {/* <p className="p-2 text-sm font-medium tracki text-center uppercase">How it works</p> */}
                 {/* <h2 className="mb-12 text-4xl font-bold leadi text-center sm:text-5xl">Pamunuan</h2> */}
                 <div className='relative'>
-                    <div className='text-[#4e4e4e] font-freestyle  text-left text-[95px] leading-[63px] '>
+                    <div className='text-[#4e4e4e] font-freestyle  text-left text-[65px] leading-[63px] '>
                         Pamunuan
                     </div>
                     <span className=' w-[150px] h-2 bg-[#eac9a5] block'></span>
@@ -19,7 +19,7 @@ const Entourage = () => {
                 <div className="grid gap-10 md:gap-8 px-8 sm:p-3 md:grid-cols-2 lg:px-12 xl:px-32">
 
                     <div className="flex flex-col gap-2 justify-center items-center">
-                        <h3 className=" text-5xl sm:text-6xl text-[#9f7648] text-center font-freestyle mb-2 sm:mb-8">Abay na Pandangal</h3>
+                        <h3 className=" text-3xl sm:text-4xl text-[#9f7648] text-center font-freestyle mb-2 sm:mb-3">Abay na Pandangal</h3>
                         {/* <p className="mt-1 dark:text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, fugit? Aspernatur, ullam enim, odit eaque quia rerum ipsum voluptatem consequatur ratione, doloremque debitis? Fuga labore omnis minima, quisquam delectus culpa!</p> */}
 
                         <div className="flex flex-col justify-center items-center">
@@ -45,7 +45,7 @@ const Entourage = () => {
 
                     </div>
                     <div className="flex flex-col gap-2  items-center">
-                        <h3 className=" text-5xl sm:text-6xl text-[#9f7648] text-center font-freestyle mb-2 sm:mb-8">Natatanging Ginoo</h3>
+                        <h3 className=" text-5xl sm:text-4xl text-[#9f7648] text-center font-freestyle mb-2 sm:mb-3">Natatanging Ginoo</h3>
                         <div className="flex flex-col justify-center items-center">
                             <img src={tibor} alt=""
                                 className="w-28 h-28 bg-auto   rounded-full mx-auto sm:mx-0 grayscale dark:bg-gray-500 aspect-square" />
@@ -60,7 +60,7 @@ const Entourage = () => {
 
 
                     <div className="flex flex-col justify-center items-center gap-2 sm:mt-20">
-                        <h3 className=" text-5xl sm:text-6xl text-[#9f7648] text-center font-freestyle mb-2 sm:mb-8">Magulang ng Babaeng Ikakasal</h3>
+                        <h3 className=" text-5xl sm:text-4xl text-[#9f7648] text-center font-freestyle mb-2 sm:mb-3">Magulang ng Babaeng Ikakasal</h3>
                         <div className="flex flex-col justify-start items-start "> <div className="text-left ">
                             <div className="my-2 text-gray-600">
                                 <h2 className="text-base font-semibold sm:text-lg">Jocelyn G. Alibusa</h2>
@@ -78,7 +78,7 @@ const Entourage = () => {
 
                     </div>
                     <div className="flex flex-col gap-2 justify-center items-center sm:mt-20">
-                        <h3 className=" text-5xl sm:text-6xl text-[#9f7648] text-center font-freestyle mb-2 sm:mb-8">Magulang ng Lalaking Ikakasal</h3>
+                        <h3 className=" text-5xl sm:text-4xl text-[#9f7648] text-center font-freestyle mb-2 sm:mb-3">Magulang ng Lalaking Ikakasal</h3>
                         <div className="flex flex-col justify-start items-start ">
                             <div className="text-left ">
                                 <div className="my-2 text-gray-600">
@@ -99,7 +99,7 @@ const Entourage = () => {
                     </div>
                     <div className="flex flex-col gap-2  items-center sm:mt-20">
                         <div>
-                            <h3 className=" text-5xl sm:text-6xl text-[#9f7648] text-center font-freestyle">Ninong at Ninang</h3>
+                            <h3 className=" text-5xl sm:text-4xl text-[#9f7648] text-center font-freestyle">Ninong at Ninang</h3>
                             <p className="text-xs sm:text-sm text-gray-400 text-center mb-4">Magsisilbing saksi sa aming mga panata</p>
                         </div>
                         <div className="flex flex-col justify-center items-center ">
@@ -117,7 +117,7 @@ const Entourage = () => {
                     </div>
                     <div className="hidden flex-col gap-2  sm:flex justify-center items-center sm:mt-20">
                         <div>
-                            <h3 className=" text-5xl sm:text-6xl text-[#9f7648] text-center font-freestyle">Ninong at Ninang</h3>
+                            <h3 className=" text-5xl sm:text-4xl text-[#9f7648] text-center font-freestyle">Ninong at Ninang</h3>
                             <p className="text-xs sm:text-sm text-gray-400 text-center mb-4">Magsisilbing saksi sa aming mga panata</p>
                         </div>
                         <div className="flex flex-col justify-center items-center ">
@@ -135,7 +135,7 @@ const Entourage = () => {
 
                     <div className="flex flex-col gap-2 justify-center items-center sm:mt-20">
                         <div>
-                            <h3 className=" text-5xl sm:text-6xl text-[#9f7648] text-center font-freestyle">Ikalawang Pares</h3>
+                            <h3 className=" text-5xl sm:text-4xl text-[#9f7648] text-center font-freestyle">Ikalawang Pares</h3>
                         </div>
                         <div className="flex flex-col justify-center items-center ">
                             <div className="text-center ">
