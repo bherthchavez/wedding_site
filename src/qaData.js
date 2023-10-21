@@ -14,7 +14,7 @@ export const qaData = [
         qAnswer: `C. Hulyo`,
     },
     {
-        question: 'Si Paula ay ipinanganak noong April 23, 1995? Ano ang Tagalog ng 1995?',
+        question: 'Si Paula ay ipinanganak noong April 24, 1995? Ano ang Tagalog ng 1995?',
         choice1: `A. Isang Libo Siyam na daan Siyamnapu at Lima`,
         choice2: `B. Sanlibo Siyam na daan Siyamnapu't Lima`,
         choice3: `C. Isang Libo Siyam na raan Siyamnapu't Lima`,
