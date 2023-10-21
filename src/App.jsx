@@ -11,7 +11,7 @@ import { useState } from "react";
 import Modal from "./components/Modal";
 import { qaData } from "./qaData";
 import firebase from "./firebase";
-
+import Chocho from './assets/chocho.png'
 
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
 
 
   const addQA = () => {
-      firebase
+    firebase
       .firestore().collection('visitors')
       .add({
         name: qa.nickName,
@@ -48,7 +48,7 @@ function App() {
         answer: qa.answer,
         qAnswer: qa.qAnswer,
         finalAns: qa.finalAns,
-        checkAnswer:finalAns ? 'Tama' : 'Mali'
+        checkAnswer: finalAns ? 'Tama' : 'Mali'
       })
       .then(() => {
         console.log('QA SAVED!')
@@ -59,9 +59,9 @@ function App() {
 
   const handleModalClose = (ans) => {
 
-    if (qaData[qa.answer].qAnswer == ans){
+    if (qaData[qa.answer].qAnswer == ans) {
       setFinalAns(true)
-    }else{
+    } else {
       setFinalAns(false)
     }
 
@@ -70,11 +70,11 @@ function App() {
 
   const onNextQAClicked = () => {
 
-    if(qa.nickName !== ''){
+    if (qa.nickName !== '') {
       setFinalQ(qaData[qa.answer].question)
       setQa({ ...qa, finalQuestion: qaData[qa.answer].question, qAnswer: qaData[qa.answer].qAnswer })
     }
-    if(qa.finalAns){
+    if (qa.finalAns) {
       setIsModalOpen(false)
       addQA()
     }
@@ -87,22 +87,30 @@ function App() {
       <main className={`bg-[#fef1e2] h-screen ${overFlowHiddem}`}>
 
         <Modal isOpen={isModalOpen} onClose={handleModalClose} qaFinal={qa.finalQuestion} finalAns={qa.finalAns} onOk={onNextQAClicked}>
-          <div className="bg-white p-4">
-            <h2 className="text-xl font-bold my-8 text-[#724526]">
-           {
-            qa.finalQuestion !== '' ?
-             `Kamusta ${qa.nickName}! Ito ang aming tanong.`
-             : 
-           ` Maligayang Pagbisita sa aming Website!`
-           }
-            
-            </h2>
-            <p className=" text-gray-800 px-4 sm:px-10 my-9">
+          <div className="bg-white p-4 ">
+            <div className="flex justify-between items-center text-left gap-5">
+
+              <img
+                src={Chocho}
+                alt="image 1"
+                className="h-20 w-20 object-cover  top-[-10px]"
+              />
+              <h2 className="text-lg font-bold my-8 text-[#724526]">
+                {
+                  qa.finalQuestion !== '' ?
+                    `Kamusta ${qa.nickName}! Ito ang aming tanong.`
+                    :
+                    ` Maligayang Pagbisita sa aming Website!`
+                }
+
+              </h2>
+            </div>
+            <p className=" text-gray-800 px-4 sm:px-10 mb-10">
               {finalQ}
             </p>
             {
               qa.finalQuestion == '' ?
-                <div className="my-7">
+                <div className="my-5">
                   <label
                     className="block text-sm font-medium text-gray-700 "
                     htmlFor="name"
@@ -122,35 +130,35 @@ function App() {
                 </div>
                 :
                 <div className="flex flex-col gap-5 font-semibold sm:px-7 mb-5 sm:mb-0">
-                 {
-                  qa.finalAns !== '' &&
-                 <h1 className={ finalAns ? `text-md font-semibold text-[#1e6e36]` : `text-md font-semibold text-[#e23030]`}>
-                 {
-                  finalAns 
-                  ? `Ang iyong sagot ay tama.`
-                  : `Ang iyong sagot ay mali.`
-                 }</h1>
-                 }
+                  {
+                    qa.finalAns !== '' &&
+                    <h1 className={finalAns ? `text-md font-semibold text-[#1e6e36]` : `text-md font-semibold text-[#e23030]`}>
+                      {
+                        finalAns
+                          ? `Ang iyong sagot ay tama.`
+                          : `Ang iyong sagot ay mali.`
+                      }</h1>
+                  }
                   <button
-                    onClick={()=> handleModalClose(qaData[qa.answer].choice1)}
+                    onClick={() => handleModalClose(qaData[qa.answer].choice1)}
                     type="button"
                     className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-start items-center rounded-sm py-1 bg-[#ffecd6] text-sm sm:text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
                     {qaData[qa.answer].choice1}
                   </button>
                   <button
-                    onClick={()=> handleModalClose(qaData[qa.answer].choice2)}
+                    onClick={() => handleModalClose(qaData[qa.answer].choice2)}
                     type="button"
                     className="h-10 mx-auto w-full px-4 sm:px-10 flex justify-start items-center rounded-sm py-1 bg-[#ffecd6] text-sm sm:text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
-                   {qaData[qa.answer].choice2}
+                    {qaData[qa.answer].choice2}
                   </button>
                   <button
-                    onClick={()=> handleModalClose(qaData[qa.answer].choice3)}
+                    onClick={() => handleModalClose(qaData[qa.answer].choice3)}
                     type="button"
                     className="h-10 mx-auto w-full   px-4 sm:px-10 flex justify-start items-center rounded-sm py-1 bg-[#ffecd6] text-sm sm:text-base text-gray-600 hover:bg-[#e6ddd2]"
                   >
-                  {qaData[qa.answer].choice3}
+                    {qaData[qa.answer].choice3}
                   </button>
                 </div>
             }
