@@ -12,6 +12,7 @@ import Modal from "./components/Modal";
 import { qaData } from "./qaData";
 import firebase from "./firebase";
 import Chocho from './assets/chocho.png'
+import Bolutoy from './assets/bolutoy.png'
 
 
 function App() {
@@ -88,14 +89,13 @@ function App() {
 
         <Modal isOpen={isModalOpen} onClose={handleModalClose} qaFinal={qa.finalQuestion} finalAns={qa.finalAns} onOk={onNextQAClicked}>
           <div className="bg-white p-4 ">
-            <div className="flex justify-between sm:justify-center items-center text-left gap-5">
-
+            <div className="flex justify-between sm:justify-center items-center text-left gap-5 my-5">
               <img
                 src={Chocho}
                 alt="image 1"
-                className="h-20 w-20 object-cover  top-[-10px]"
+                className="h-20 w-20 object-cover"
               />
-              <h2 className="text-lg font-bold my-8 text-[#724526]">
+              <h2 className="text-lg font-bold  text-[#724526]">
                 {
                   qa.finalQuestion !== '' ?
                     `Kamusta ${qa.nickName}! Ito ang aming tanong.`
@@ -105,9 +105,16 @@ function App() {
 
               </h2>
             </div>
-            <p className=" text-gray-800 px-4 sm:px-10 mb-10 sm:my-10">
-              {finalQ}
-            </p>
+            <div className="flex justify-between sm:justify-center items-center text-left gap-5">
+              <h2 className=" text-gray-800 px-4 sm:px-10 mb-10 sm:my-10">
+                {finalQ}
+              </h2>
+              <img
+                src={Bolutoy}
+                alt="image 2"
+                className="h-36 object-cover"
+              />
+            </div>
             {
               qa.finalQuestion == '' ?
                 <div className="my-5">
