@@ -88,7 +88,7 @@ function App() {
 
         <Modal isOpen={isModalOpen} onClose={handleModalClose} qaFinal={qa.finalQuestion} finalAns={qa.finalAns} onOk={onNextQAClicked}>
           <div className="bg-white p-4 ">
-            <div className="flex justify-between items-center text-left gap-5">
+            <div className="flex justify-between sm:justify-center items-center text-left gap-5">
 
               <img
                 src={Chocho}
@@ -105,7 +105,7 @@ function App() {
 
               </h2>
             </div>
-            <p className=" text-gray-800 px-4 sm:px-10 mb-10">
+            <p className=" text-gray-800 px-4 sm:px-10 mb-10 sm:my-10">
               {finalQ}
             </p>
             {
