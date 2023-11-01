@@ -35,28 +35,30 @@ const Colors = () => {
 
     console.log(listInvited)
 
-    
+
 
     const searchInvited = () => {
-        if(details.firstName !== "" && details.lastName !== ""){
+        if (details.firstName !== "" && details.lastName !== "") {
 
-           const existing = listInvited.find(inv => inv.first_name.toUpperCase() == details.firstName.toUpperCase() && inv.last_name.toUpperCase() == details.lastName.toUpperCase())
-           
-           existing 
-           ? navigate(`rsvp/${existing.id}`)
-           :  setNoFound("Hindi makita ang iyong pangalan, tingnan ang iyong inilagay na pangalan at apelyido. O makipag-ugnayan kay Paula at Berth.")
+            const existing = listInvited.find(inv => inv.first_name.toUpperCase() == details.firstName.toUpperCase() && inv.last_name.toUpperCase() == details.lastName.toUpperCase())
+
+            existing
+                ? navigate(`rsvp/${existing.id}`)
+                : setNoFound("Hindi makita ang iyong pangalan, tingnan ang iyong inilagay na pangalan at apelyido. O makipag-ugnayan kay Paula at Berth.")
         }
-        
+
     }
 
     return (
-        <section name='Kulay' className="bg-custom2 bg-local bg-center bg-cover py-5 sm:py-10 font-sans">
+        <section name='kulay' className="bg-custom2 bg-local bg-center bg-cover py-5 sm:py-10 font-sans flex flex-col justify-between">
             <div className="container flex flex-col mt-20 h-screen p-8 sm:gap-10 mx-auto md:p-8 max-w-[1200px]">
                 <div className='flex flex-col justify-center items-center'>
                     <div className='text-[#4e4e4e]  text-center text-[35px] sm:text-[55px] leading-[43px] sm:leading-[63px] '>
                         Pamantayan ng <br /> Pananamit at RSVP
                     </div>
-                    
+                    <div className="flex justify-center items-center">
+                        <div className='sm:ml-36 w-[150px] sm:w-[220px]  h-2 bg-[#eac9a5]'></div>
+                    </div>
                 </div>
 
 
@@ -109,11 +111,11 @@ const Colors = () => {
                                 </span>
                             </label>
 
-                           {noFound && 
-                            <h1 className="text-[#a57034] text-xs mb-2">
-                           {noFound}
-                            </h1>
-                           }
+                            {noFound &&
+                                <h1 className="text-[#a57034] text-xs mb-2">
+                                    {noFound}
+                                </h1>
+                            }
                             <button
                                 className=" group relative inline-flex items-center overflow-hidden rounded-md bg-[#da9e5b] px-8 py-3 text-white focus:outline-none focus:ring active:bg-[#f3ba7a]"
                                 onClick={searchInvited}
@@ -145,6 +147,11 @@ const Colors = () => {
                     </div>
 
                 </div>
+            </div>
+            <div className={'p-4 text-xs lg:text-base flex justify-center text-[#f1f0e3]'}>
+                <a href='https://julbertpruel.netlify.app/' className=' '>
+                    ⓒ {new Date().getFullYear()} Julbert Pruel
+                </a>
             </div>
         </section>
     )

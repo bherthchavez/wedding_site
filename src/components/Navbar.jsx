@@ -14,10 +14,10 @@ const Navbar = () => {
   return (
     <>
       <div className={`z-20 bg-[#9f7648]  fixed flex justify-between px-4 sm:px-8 items-center top-0 w-screen h-20 text-white`}>
-   
-          <a href='/' className="cursor-pointer">
-            <img src={pg2} alt='Logo' className='w-12 h-12' />
-          </a>
+
+        <a href='/' className="cursor-pointer">
+          <img src={pg2} alt='Logo' className='w-12 h-12' />
+        </a>
         <ul className="hidden md:flex gap-8 ">
           <Link to='simbahan' smooth={true} duration={500}>
             <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
@@ -40,11 +40,13 @@ const Navbar = () => {
               </span>
             </li>
           </Link>
+          <Link to='kulay' smooth={true} duration={500}>
           <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
             <span className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
-              Mga Detalye
+              Pananamit at RSVP
             </span>
           </li>
+          </Link>
         </ul>
 
         {/* Humberger */}
@@ -88,9 +90,9 @@ const Navbar = () => {
                 Pamunuan
               </li>
             </Link>
-            <Link to='' smooth={true} duration={500}>
+            <Link to='kulay' smooth={true} duration={500}>
               <li onClick={handleNav} className=' cursor-pointer  '>
-                Mga Detalye
+                Pananamit at RSVP
               </li>
             </Link>
 

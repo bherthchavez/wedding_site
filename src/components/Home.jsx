@@ -6,7 +6,6 @@ import Schedule from './Schedule'
 import Entourage from './Entourage'
 import Colors from './Colors'
 import Navbar from './Navbar'
-import Footer from './Footer'
 import { Analytics } from '@vercel/analytics/react'
 
 function Home() {
@@ -19,7 +18,6 @@ function Home() {
             <Schedule />
             <Entourage />
             <Colors />
-            <Footer />
             <Analytics />
 
         </>
