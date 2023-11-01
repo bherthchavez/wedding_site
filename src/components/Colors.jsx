@@ -50,7 +50,7 @@ const Colors = () => {
     }
 
     return (
-        <section name='kulay' className="bg-custom2 bg-local bg-center bg-cover py-5 sm:py-10 font-sans flex flex-col justify-between">
+        <section name='kulay' className="bg-custom2 bg-local bg-center bg-cover  py-5 sm:py-10 font-sans flex flex-col justify-between">
             <div className="container flex flex-col mt-20 h-screen p-8 sm:gap-10 mx-auto md:p-8 max-w-[1200px]">
                 <div className='flex flex-col justify-center items-center'>
                     <div className='text-[#4e4e4e]  text-center text-[35px] sm:text-[55px] leading-[43px] sm:leading-[63px] '>

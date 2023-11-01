@@ -8,3 +8,6 @@
 .bg-custom2 {
   background-image: url("../src/assets/bg2.png"); /* Update the path to your image */
 }
+.bg-custom3 {
+  background-image: url("../src/assets/footer.png"); /* Update the path to your image */
+}

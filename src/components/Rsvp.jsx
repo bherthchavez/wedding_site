@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import useApi from "../hooks/useAPI";
 import pg from '../assets/pj.png'
+import men from '../assets/visitors_men.png'
 import firebase from "../firebase";
 
 
@@ -22,7 +23,7 @@ function Rsvp() {
       try {
         const result = await getInvited()
         const existing = result.find(inv => inv.id === params.id)
-        if(existing){
+        if (existing) {
           setFoundInvited(existing)
           setBtnStatus(existing.status)
         }
@@ -32,7 +33,7 @@ function Rsvp() {
       }
     }
     fetchInvited();
-  
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refetchTrigger])
 
@@ -51,7 +52,7 @@ function Rsvp() {
       }).catch((error) => {
         console.log(error.message)
       });
-    
+
   };
   const notAttending = () => {
     firebase
@@ -64,12 +65,14 @@ function Rsvp() {
       }).catch((error) => {
         console.log(error.message)
       });
-    
+
   };
 
 
+
+
   return (
-    <section name='Kulay' className="flex flex-col justify-between bg-custom2 bg-local bg-center bg-cover h-screen  font-sans">
+    <section name='Kulay' className="flex flex-col justify-between bg-custom2 bg-local bg-[#f1f0e3] h-auto bg-center bg-cover font-sans">
       <div className="container flex flex-col p-8 gap-5 sm:gap-10 mx-auto md:p-8 max-w-[1200px]">
         <div className='flex flex-col justify-center items-center'>
           <div className="flex flex-col justify-center items-center text-[#745129] mb-4 text-xs gap-1 italic">
@@ -117,6 +120,17 @@ function Rsvp() {
             Hindi
           </button>
 
+        </div>
+
+        
+
+        <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
+          <div className="text-gray-600">
+            <h1> Salamat sa Pag kumpirma ng inyong pagdalo. Ito ang inyong dapat isuot sa kasal.</h1>
+          </div>
+          <div>
+            <img src={men} alt='Logo' className=' sm:w-32' />
+          </div>
         </div>
 
 
