@@ -3,7 +3,7 @@ import { useState } from 'react';
 import pg2 from '../assets/pj2.png'
 import { Link } from 'react-scroll';
 
-const Navbar = (modalOpen) => {
+const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
@@ -14,9 +14,10 @@ const Navbar = (modalOpen) => {
   return (
     <>
       <div className={`z-20 bg-[#9f7648]  fixed flex justify-between px-4 sm:px-8 items-center top-0 w-screen h-20 text-white`}>
-        <div className="cursor-pointer">
-          <img src={pg2} alt='Logo' className='w-12 h-12' />
-        </div>
+   
+          <a href='/' className="cursor-pointer">
+            <img src={pg2} alt='Logo' className='w-12 h-12' />
+          </a>
         <ul className="hidden md:flex gap-8 ">
           <Link to='simbahan' smooth={true} duration={500}>
             <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
@@ -68,7 +69,7 @@ const Navbar = (modalOpen) => {
         </div>
       </div>
 
-      <div className={nav ? ` ${modalOpen} fixed z-10 left-0 top-0 w-full h-full backdrop-blur-xl  bg-[#9f7648] ease-in-out duration-300 bg-opacity text-white` : 'z-10 fixed w-[70%] top-0 h-full ease-in-out duration-300  left-[-100%] text-white'}>
+      <div className={nav ? `overflow-hidden fixed z-10 left-0 top-0 w-full h-full backdrop-blur-xl  bg-[#9f7648] ease-in-out duration-300 bg-opacity text-white` : 'z-10 fixed w-[70%] top-0 h-full ease-in-out duration-300  left-[-100%] text-white'}>
         <div className='flex justify-center items-center  h-screen '>
 
           <ul className='text-3xl flex flex-col  gap-8 '>

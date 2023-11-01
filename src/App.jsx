@@ -1,18 +1,14 @@
 
-import Head from "./components/Head"
-import Navbar from "./components/Navbar"
-import { Analytics } from '@vercel/analytics/react';
-import TheChuch from "./components/TheChuch";
-import Footer from "./components/Footer";
-import TheRecep from "./components/TheRecep";
-import Schedule from "./components/Schedule";
-import Entourage from "./components/Entourage";
+
 import { useState } from "react";
 import Modal from "./components/Modal";
 import { qaData } from "./qaData";
 import firebase from "./firebase";
 import Chocho from './assets/chocho.png'
 import Bolutoy from './assets/bolutoy.png'
+import { Routes, Route } from "react-router-dom"
+import Rsvp from "./components/Rsvp";
+import Home from "./components/Home";
 
 
 function App() {
@@ -172,15 +168,14 @@ function App() {
 
           </div>
         </Modal>
+       
+        <Routes>
 
-        <Navbar modalOpen={isModalOpen} />
-        <Head />
-        <TheChuch />
-        <TheRecep />
-        <Schedule />
-        <Entourage />
-        <Footer />
-        <Analytics />
+          <Route path="/" element={<Home />} />
+          <Route path="/rsvp/:id" element={<Rsvp />} />
+
+        </Routes>
+
       </main>
     </>
   )
