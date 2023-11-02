@@ -347,7 +347,7 @@ const deleteInv =()=>{
                         <tr>
                           
                           <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                           {invited.length} Name
+                          Name <span className="text-xs text-gray-300 ml-1">( {invited.length} )</span>
                           </th>
                           <th className="whitespace-nowrap px-4 py-2 font-medium ">
                             Status
