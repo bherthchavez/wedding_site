@@ -346,6 +346,24 @@ const deleteInv =()=>{
 
 
                       </tbody>
+                      <thead className="text-left bg-[#bd874e] text-white ">
+                        <tr>
+                          
+                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                            Name <span className="text-xs text-gray-300 ml-1">( {invited.length} )</span>
+                          </th>
+                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                            Status
+                          </th>
+                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                            Remarks
+                          </th>
+                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                            Gender
+                          </th>
+                         
+                        </tr>
+                      </thead>
                    
                     </table>
                  
