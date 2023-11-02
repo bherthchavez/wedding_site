@@ -77,12 +77,6 @@ function Rsvp() {
             </a>
             <span>Disyembre  3, 2023</span>
           </div>
-          {/* <div className='text-[#797979]  text-center text-lg sm:text-[25px] leading-none sm:leading-[29px] '>
-            Pamantayan ng <br /> Pananamit at RSVP
-          </div>
-          <div className="flex justify-center items-center">
-            <div className='sm:ml-24 w-[150px]  h-1 bg-[#f7dabc]'></div>
-          </div> */}
         </div>
 
         <div className='text-[#727171] flex flex-col justify-center items-center gap-2  text-center text-[25px] sm:text-[35px] leading-7 sm:leading-[43px] '>
@@ -135,7 +129,7 @@ function Rsvp() {
               </div>
             </div>
             <div>
-              <img src={men} alt='Logo' className=' sm:w-32' />
+              <img src={men} alt='Logo' className='w-32 sm:w-44' />
             </div>
           </div>
         }
@@ -144,14 +138,14 @@ function Rsvp() {
           foundInvited.gender === 'female'
           &&
           <div className="flex justify-center gap-3 sm:gap-10 items-start p-5  border-t-2  border-[#e9d2b7]">
-            <div className="text-gray-600 w-60 sm:w-80">
+            <div className="text-gray-600 w-60 sm:w-60">
               <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
               <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
                 <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Semi-formal attire na Choco Brown ang kulay.</p>
               </div>
             </div>
             <div>
-              <img src={women} alt='Logo' className=' sm:w-32' />
+              <img src={women} alt='Logo' className='w-32 sm:w-44' />
             </div>
           </div>
         }
