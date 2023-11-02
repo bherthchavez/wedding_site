@@ -32,7 +32,8 @@ function InvitedList() {
     const fetchInvited = async () => {
       try {
         const result = await getInvited()
-        setInvited(result)
+        const filterdByStatus = result.sort((a,b)=> a.status > b.status ? 1 : -1)
+        setInvited(filterdByStatus)
 
       } catch (error) {
         console.log('Error fetching data:', error);
