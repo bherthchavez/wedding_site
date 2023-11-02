@@ -92,7 +92,7 @@ function Rsvp() {
         <div className='text-[#727171] flex flex-col justify-center items-center gap-2  text-center text-[25px] sm:text-[35px] leading-7 sm:leading-[43px] '>
           <div>Kamusta {foundInvited.gender === 'male' ? 'Ginoong' : 'Binibining'}</div>
 
-          <div className="font-semibold text-[#745129]">{foundInvited.first_name} {foundInvited.last_name}</div>
+          <div className="font-semibold text-[#745129] capitalize">{foundInvited.first_name} {foundInvited.last_name}</div>
 
           <div className="mt-5">Ikaw po ba ay Makakadalo sa Kasal namin?</div>
         </div>

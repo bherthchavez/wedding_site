@@ -54,7 +54,7 @@ function InvitedList() {
         .then(() => {
           console.log('New Invited SAVED!')
           setRefetchTrigger(prev => !prev)
-          setAddInv(prev => !prev)
+          cancelUpdateAdd()
         }).catch((error) => {
           console.log(error.message)
         });
