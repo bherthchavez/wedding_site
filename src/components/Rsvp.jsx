@@ -28,7 +28,6 @@ function Rsvp() {
           setFoundInvited(existing)
           setBtnStatus(existing.status)
         }
-
       } catch (error) {
         console.log('Error fetching data:', error);
       }
@@ -46,7 +45,6 @@ function Rsvp() {
       .doc(params.id)
       .update({ status: "attending" })
       .then(() => {
-        console.log("status updated!");
         setRefetchTrigger(prev => !prev)
       }).catch((error) => {
         console.log(error.message)
@@ -59,7 +57,6 @@ function Rsvp() {
       .doc(params.id)
       .update({ status: "not attending" })
       .then(() => {
-        console.log("status updated!");
         setRefetchTrigger(prev => !prev)
       }).catch((error) => {
         console.log(error.message)
@@ -101,8 +98,8 @@ function Rsvp() {
             <button
               onClick={attending}
               className={btnStatus.toLowerCase() === `pending` || btnStatus.toLowerCase() === `not attending`
-                ? `py-2 px-7 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
-                : `py-2 px-7  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
+                ? `py-2 px-4 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
+                : `py-2 px-4  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
               }
 
             >
@@ -112,8 +109,8 @@ function Rsvp() {
             <button
               onClick={notAttending}
               className={btnStatus.toLowerCase() === `pending` || btnStatus.toLowerCase() === `attending`
-                ? `py-2 px-7 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
-                : `py-2 px-7  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
+                ? `py-2 px-4 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
+                : `py-2 px-4  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
               }
 
             >
