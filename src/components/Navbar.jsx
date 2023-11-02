@@ -49,7 +49,7 @@ const Navbar = () => {
             </span>
           </li>
           </Link>
-          <li onClick={()=> navigate(`admin}`)} className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
+          <li onClick={()=> navigate(`admin`)} className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
             <span 
             className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
               Admin
@@ -104,7 +104,7 @@ const Navbar = () => {
               </li>
             </Link>
             <li onClick={handleNav} className=' cursor-pointer  '>
-              <p onClick={()=> navigate(`admin}`)}>Admin</p>  
+              <p onClick={()=> navigate(`admin`)}>Admin</p>  
               </li>
 
 
