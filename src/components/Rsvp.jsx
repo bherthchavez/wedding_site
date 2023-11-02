@@ -126,8 +126,8 @@ function Rsvp() {
 
 
 
-        { foundInvited.length && foundInvited.gender === 'male'
-          ?
+        {  foundInvited.gender === 'male'
+          &&
           <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
             <div className="text-gray-600 w-60 sm:w-80">
               <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
@@ -141,7 +141,11 @@ function Rsvp() {
               <img src={men} alt='Logo' className=' sm:w-32' />
             </div>
           </div>
-          :
+        }
+
+        {
+          foundInvited.gender === 'female'
+          &&
           <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
             <div className="text-gray-600 w-60 sm:w-80">
               <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
