@@ -304,11 +304,12 @@ const deleteInv =()=>{
                             Status
                           </th>
                           <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Gender
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
                             Remarks
                           </th>
+                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                            Gender
+                          </th>
+                         
                         </tr>
                       </thead>
 
@@ -330,8 +331,8 @@ const deleteInv =()=>{
                               <td className={inv.status.toLowerCase() == 'attending' ? `whitespace-nowrap px-4 py-2 capitalize text-green-600 font-semibold` : inv.status.toLowerCase() == 'not attending' ? `whitespace-nowrap px-4 py-2 capitalize text-red-600 font-semibold` : `whitespace-nowrap px-4 py-2 capitalize text-orange-600 font-semibold`}>
                                 {inv.status}
                               </td>
-                              <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.gender}</td>
                               <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.remarks}</td>
+                              <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.gender}</td>
                             </tr>
                           ))
 
