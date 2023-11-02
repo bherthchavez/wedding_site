@@ -129,7 +129,7 @@ function Rsvp() {
               </div>
             </div>
             <div>
-              <img src={men} alt='Logo' className='w-32 sm:w-44' />
+              <img src={men} alt='Logo' className=' sm:w-32' />
             </div>
           </div>
         }
@@ -145,7 +145,7 @@ function Rsvp() {
               </div>
             </div>
             <div>
-              <img src={women} alt='Logo' className='w-32 sm:w-44' />
+              <img src={women} alt='Logo' className='w-32 sm:w-56' />
             </div>
           </div>
         }
