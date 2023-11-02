@@ -33,9 +33,7 @@ const Colors = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [refetchTrigger])
 
-    console.log(listInvited)
-
-
+   
 
     const searchInvited = () => {
         if (details.firstName !== "" && details.lastName !== "") {

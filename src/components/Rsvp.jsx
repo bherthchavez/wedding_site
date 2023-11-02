@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import useApi from "../hooks/useAPI";
 import pg from '../assets/pj.png'
 import men from '../assets/visitors_men.png'
+import women from '../assets/visitors_women.png'
 import firebase from "../firebase";
 
 
@@ -37,8 +38,6 @@ function Rsvp() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refetchTrigger])
 
-  console.log(foundInvited)
-  console.log(btnStatus)
 
 
   const attending = () => {
@@ -93,55 +92,70 @@ function Rsvp() {
           <div className="text-xl">Kamusta {foundInvited.gender === 'male' ? 'Ginoong' : 'Binibining'}</div>
 
           <div className="font-semibold text-[#745129] capitalize">
-         <p>{foundInvited.first_name} {foundInvited.last_name}</p> 
-         <p className="text-sm font-normal text-[#745129]">{foundInvited.remarks}</p>
+            <p>{foundInvited.first_name} {foundInvited.last_name}</p>
+            <p className="text-sm font-normal text-[#745129]">{foundInvited.remarks}</p>
           </div>
 
           <div className="mt-5 text-xl">Ikaw po ba ay Makakadalo sa Kasal namin?</div>
           <div className="flex justify-center text-base items-center gap-5">
-          <button
-            onClick={attending}
-            className={btnStatus.toLowerCase() === `pending` || btnStatus.toLowerCase() === `not attending`
-              ? `py-2 px-7 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
-              : `py-2 px-7  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
-            }
+            <button
+              onClick={attending}
+              className={btnStatus.toLowerCase() === `pending` || btnStatus.toLowerCase() === `not attending`
+                ? `py-2 px-7 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
+                : `py-2 px-7  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
+              }
 
-          >
-            Makakadalo
-          </button>
+            >
+              Makakadalo
+            </button>
 
-          <button
-            onClick={notAttending}
-            className={btnStatus.toLowerCase() === `pending` || btnStatus.toLowerCase() === `attending`
-              ? `py-2 px-7 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
-              : `py-2 px-7  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
-            }
+            <button
+              onClick={notAttending}
+              className={btnStatus.toLowerCase() === `pending` || btnStatus.toLowerCase() === `attending`
+                ? `py-2 px-7 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
+                : `py-2 px-7  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
+              }
 
-          >
-            Hindi
-          </button>
+            >
+              Hindi
+            </button>
 
-        </div>
-        </div>
-
-        
-
-        
-
-        <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
-          <div className="text-gray-600">
-            <h1 className="text-sm"> Salamat sa Pag kumpirma ng inyong pagdalo. Ito ang inyong dapat isuot sa kasal.</h1>
-           <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-sm">
-
-            <p className="bg-[#fff4cb] py-1 px-2 rounded-md">Barong na hindi See Through. </p>
-            <p className="bg-[#7b3f00] py-1 px-2 rounded-md text-gray-400">Slacks na Choco Brown ang Kulay. </p>
-            <p className="bg-[#2b2b2b] py-1 px-2 rounded-md text-gray-400">Sapatos na Brown o Black ang Kulay. </p>
-           </div>
-          </div>
-          <div>
-            <img src={men} alt='Logo' className=' sm:w-32' />
           </div>
         </div>
+
+
+
+
+        {foundInvited.gender === 'male'
+          ?
+          <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
+            <div className="text-gray-600 w-60 sm:w-80">
+              <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
+              <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
+                <p className="bg-[#fff4cb] p-2 rounded-md">Barong na hindi See Through. </p>
+                <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Slacks na Choco Brown ang Kulay. </p>
+                <p className="bg-[#2b2b2b] p-2 rounded-md text-gray-300">Sapatos na Brown o Black ang Kulay. </p>
+              </div>
+            </div>
+            <div>
+              <img src={men} alt='Logo' className=' sm:w-32' />
+            </div>
+          </div>
+          :
+          <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
+            <div className="text-gray-600 w-60 sm:w-80">
+              <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
+              <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
+                <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Semi-formal attire na Choco Brown ang kulay.</p>
+              </div>
+            </div>
+            <div>
+              <img src={women} alt='Logo' className=' sm:w-32' />
+            </div>
+          </div>
+        }
+
+
 
 
       </div>
