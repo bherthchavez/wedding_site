@@ -9,7 +9,7 @@ function InvitedList() {
   const [invited, setInvited] = useState([])
   const [addInv, setAddInv] = useState(false)
   const [editInv, setEditInv] = useState(false)
-  const [pass, setPass] = useState(true)
+  const [pass, setPass] = useState(false)
   const [password, setPassword] = useState('')
   const [wrongPassword, setWrongPassword] = useState('')
   // eslint-disable-next-line no-unused-vars
