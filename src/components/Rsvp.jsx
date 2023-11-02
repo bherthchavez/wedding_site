@@ -126,7 +126,7 @@ function Rsvp() {
 
 
 
-        {foundInvited.gender === 'male'
+        { foundInvited.length && foundInvited.gender === 'male'
           ?
           <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
             <div className="text-gray-600 w-60 sm:w-80">
