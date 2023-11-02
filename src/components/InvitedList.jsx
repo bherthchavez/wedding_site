@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
 import useApi from "../hooks/useAPI";
 import pg from '../assets/pj.png'
 import firebase from "../firebase";
 
 
 function InvitedList() {
-  const params = useParams()
-
 
   const [invited, setInvited] = useState([])
   const [addInv, setAddInv] = useState(false)
@@ -45,38 +42,27 @@ function InvitedList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refetchTrigger])
 
-  console.log(invited)
-
-  const attending = () => {
-    firebase
-      .firestore().collection('invited')
-      .doc(params.id)
-      .update({ status: "attending" })
-      .then(() => {
-        console.log("status updated!");
-        setRefetchTrigger(prev => !prev)
-      }).catch((error) => {
-        console.log(error.message)
-      });
-
-  };
+ 
 
   const saveInv = () => {
-    console.log(details)
-    firebase
-      .firestore().collection('invited')
-      .add(details)
-      .then(() => {
-        console.log('New Invited SAVED!')
-        setRefetchTrigger(prev => !prev)
-        setAddInv(prev => !prev)
-      }).catch((error) => {
-        console.log(error.message)
-      });
+    console.log(!details)
+    if( details.first_name && details.last_name && details.status && details.gender ){
+
+      firebase
+        .firestore().collection('invited')
+        .add(details)
+        .then(() => {
+          console.log('New Invited SAVED!')
+          setRefetchTrigger(prev => !prev)
+          setAddInv(prev => !prev)
+        }).catch((error) => {
+          console.log(error.message)
+        });
+    }
   }
 
   const checkPass = ()=>{
-    if(password === 'chochotaba'){
+    if(password.toLowerCase() === 'chochotaba'){
       setPass(prev => !prev)
       setPassword("")
       setWrongPassword("")
