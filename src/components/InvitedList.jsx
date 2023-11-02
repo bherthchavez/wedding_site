@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useApi from "../hooks/useAPI";
 import pg from '../assets/pj.png'
 import firebase from "../firebase";
-
+import { FiRefreshCw } from "react-icons/fi";
 
 function InvitedList() {
 
@@ -149,7 +149,10 @@ const deleteInv =()=>{
             ?
             <>
               <div className='text-[#727171] flex flex-col sm:flex-row justify-center items-center gap-5 sm:gap-10  text-center text-[20px] sm:text-[25px] leading-7 sm:leading-[43px] '>
-                <div>Listahan ng Inbitado sa Kasal </div>
+                <div className="flex justify-between items-center gap-2"> 
+                <p onClick={()=> setRefetchTrigger(prev => !prev)} className="cursor-pointer hover:text-[#b97b33]"><FiRefreshCw/></p> 
+                <p>Listahan ng Inbitado sa Kasal</p> 
+                </div>
                {editInv
                ?
                <div className="flex justify-center items-center gap-3">
@@ -294,7 +297,7 @@ const deleteInv =()=>{
                     </div>
                     :
                     <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-                      <thead className="text-left bg-[#bd874e] text-white">
+                      <thead className="text-left bg-[#bd874e] text-white ">
                         <tr>
                           
                           <th className="whitespace-nowrap px-4 py-2 font-medium ">
@@ -343,24 +346,7 @@ const deleteInv =()=>{
 
 
                       </tbody>
-                      <thead className="text-left bg-[#bd874e] text-white">
-                        <tr>
-                          
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                          Name <span className="text-xs text-gray-300 ml-1">( {invited.length} )</span>
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Status
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Remarks
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Gender
-                          </th>
-                         
-                        </tr>
-                      </thead>
+                   
                     </table>
                  
                   }
