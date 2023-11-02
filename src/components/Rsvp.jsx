@@ -90,14 +90,15 @@ function Rsvp() {
         </div>
 
         <div className='text-[#727171] flex flex-col justify-center items-center gap-2  text-center text-[25px] sm:text-[35px] leading-7 sm:leading-[43px] '>
-          <div>Kamusta {foundInvited.gender === 'male' ? 'Ginoong' : 'Binibining'}</div>
+          <div className="text-xl">Kamusta {foundInvited.gender === 'male' ? 'Ginoong' : 'Binibining'}</div>
 
-          <div className="font-semibold text-[#745129] capitalize">{foundInvited.first_name} {foundInvited.last_name}</div>
+          <div className="font-semibold text-[#745129] capitalize">
+         <p>{foundInvited.first_name} {foundInvited.last_name}</p> 
+         <p className="text-sm font-normal text-[#745129]">{foundInvited.remarks}</p>
+          </div>
 
-          <div className="mt-5">Ikaw po ba ay Makakadalo sa Kasal namin?</div>
-        </div>
-
-        <div className="flex justify-center items-center gap-5">
+          <div className="mt-5 text-xl">Ikaw po ba ay Makakadalo sa Kasal namin?</div>
+          <div className="flex justify-center text-base items-center gap-5">
           <button
             onClick={attending}
             className={btnStatus.toLowerCase() === `pending` || btnStatus.toLowerCase() === `not attending`
@@ -121,6 +122,9 @@ function Rsvp() {
           </button>
 
         </div>
+        </div>
+
+        
 
         
 
