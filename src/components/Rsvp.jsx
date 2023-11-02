@@ -100,7 +100,7 @@ function Rsvp() {
         <div className="flex justify-center items-center gap-5">
           <button
             onClick={attending}
-            className={btnStatus === `pending` || btnStatus === `not attending`
+            className={btnStatus.toLowerCase() === `pending` || btnStatus.toLowerCase() === `not attending`
               ? `py-2 px-7 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
               : `py-2 px-7  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
             }
@@ -111,7 +111,7 @@ function Rsvp() {
 
           <button
             onClick={notAttending}
-            className={btnStatus === `pending` || btnStatus === `attending`
+            className={btnStatus.toLowerCase() === `pending` || btnStatus.toLowerCase() === `attending`
               ? `py-2 px-7 bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`
               : `py-2 px-7  bg-[#db9b51] text-white shadow-md rounded-md  hover:shadow-none `
             }
@@ -126,7 +126,13 @@ function Rsvp() {
 
         <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
           <div className="text-gray-600">
-            <h1> Salamat sa Pag kumpirma ng inyong pagdalo. Ito ang inyong dapat isuot sa kasal.</h1>
+            <h1 className="text-sm"> Salamat sa Pag kumpirma ng inyong pagdalo. Ito ang inyong dapat isuot sa kasal.</h1>
+           <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-sm">
+
+            <p className="bg-[#fff4cb] py-1 px-2 rounded-md">Barong na hindi See Through. </p>
+            <p className="bg-[#7b3f00] py-1 px-2 rounded-md text-gray-400">Slacks na Choco Brown ang Kulay. </p>
+            <p className="bg-[#2b2b2b] py-1 px-2 rounded-md text-gray-400">Sapatos na Brown o Black ang Kulay. </p>
+           </div>
           </div>
           <div>
             <img src={men} alt='Logo' className=' sm:w-32' />

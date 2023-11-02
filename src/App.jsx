@@ -9,6 +9,7 @@ import Bolutoy from './assets/bolutoy.png'
 import { Routes, Route } from "react-router-dom"
 import Rsvp from "./components/Rsvp";
 import Home from "./components/Home";
+import InvitedList from "./components/InvitedList";
 
 
 function App() {
@@ -173,6 +174,7 @@ function App() {
 
           <Route path="/" element={<Home />} />
           <Route path="/rsvp/:id" element={<Rsvp />} />
+          <Route path="/admin" element={<InvitedList />} />
 
         </Routes>
 
