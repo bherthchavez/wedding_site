@@ -146,7 +146,7 @@ function Rsvp() {
         {
           foundInvited.gender === 'female'
           &&
-          <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
+          <div className="flex justify-center gap-3 sm:gap-10 items-start p-5  border-t-2  border-[#e9d2b7]">
             <div className="text-gray-600 w-60 sm:w-80">
               <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
               <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
