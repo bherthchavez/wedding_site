@@ -119,7 +119,7 @@ function Rsvp() {
 
         {  foundInvited.gender === 'male'
           &&
-          <div className="flex justify-center gap-3 sm:gap-10 items-start p-5">
+          <div className="flex justify-center gap-3 sm:gap-10 items-start p-5 border-t-2  border-[#e9d2b7]">
             <div className="text-gray-600 w-60 sm:w-80">
               <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
               <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
@@ -141,7 +141,7 @@ function Rsvp() {
             <div className="text-gray-600 w-60 sm:w-60">
               <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
               <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
-                <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Semi-formal attire na Choco Brown ang kulay.</p>
+                <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Formal Attire na Choco Brown ang Kulay.</p>
               </div>
             </div>
             <div>

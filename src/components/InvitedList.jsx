@@ -194,7 +194,7 @@ const deleteInv =()=>{
               </div>
               <div className="flex flex-col items-center justify-center gap-5">
 
-                <div className="overflow-x-auto h-[330px] sm:h-96 w-[300px] sm:w-[500px] md:[700px] rounded-lg border border-gray-200 bg-white">
+                <div className="overflow-x-auto h-[330px] sm:h-96 w-[300px] sm:w-[700px]  rounded-lg border border-gray-200 bg-white">
                   {addInv || editInv
                     ?
                     <div className="min-w-full p-5 sm:p-10 flex flex-col justify-center items-center gap-3">
@@ -298,7 +298,7 @@ const deleteInv =()=>{
                         <tr>
                           
                           <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Name
+                            Name <span className="text-xs text-gray-300 ml-1">( {invited.length} )</span>
                           </th>
                           <th className="whitespace-nowrap px-4 py-2 font-medium ">
                             Status
@@ -343,6 +343,24 @@ const deleteInv =()=>{
 
 
                       </tbody>
+                      <thead className="text-left bg-[#bd874e] text-white">
+                        <tr>
+                          
+                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                           {invited.length} Name
+                          </th>
+                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                            Status
+                          </th>
+                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                            Remarks
+                          </th>
+                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                            Gender
+                          </th>
+                         
+                        </tr>
+                      </thead>
                     </table>
                  
                   }
