@@ -84,7 +84,7 @@ const Colors = () => {
                                 <span
                                     className="absolute tracking-widest start-3 top-3 -translate-y-1/2 text-xs text-gray-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs"
                                 >
-                                    Pangalan
+                                    Unang Pangalan
                                 </span>
                             </label>
                             <label

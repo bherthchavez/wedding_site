@@ -4,6 +4,8 @@ import useApi from "../hooks/useAPI";
 import pg from '../assets/pj.png'
 import men from '../assets/visitors_men.png'
 import women from '../assets/visitors_women.png'
+import guest_women from '../assets/guest_women.png'
+import guest_men from '../assets/guest_men.png'
 import firebase from "../firebase";
 
 
@@ -119,6 +121,50 @@ function Rsvp() {
 
         {  foundInvited.gender === 'male'
           &&
+            foundInvited.remarks =='importanteng bisita' 
+            &&
+          <div className="flex justify-center gap-3 sm:gap-10 items-start p-5 border-t-2  border-[#e9d2b7]">
+            <div className="text-gray-600 w-60 sm:w-80">
+              <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
+              <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
+                <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Semi-Formal Attire na Choco Brown ang Kulay.</p>
+                <p className= "bg-[#ffefde] p-2 text-xs rounded-md  text-red-600 text-left">
+                <span className="font-extrabold">PAALALA:</span> <br/>
+                <span className="font-semibold"> Bawal ang T-shirt, Sando, Maong Pants o Shorts, Tsinelas, Hoodie.</span></p>
+              </div>
+            </div>
+            <div>
+              <img src={guest_men} alt='Logo' className='w-44' />
+            </div>
+          </div>
+        }
+
+        {
+          foundInvited.gender === 'female'
+          &&
+           foundInvited.remarks =='importanteng bisita' 
+            &&
+          <div className="flex justify-center gap-3 sm:gap-10 items-start p-5 border-t-2  border-[#e9d2b7]">
+            <div className="text-gray-600 w-60 sm:w-80">
+              <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
+              <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
+                <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Semi-Formal Attire na Choco Brown ang Kulay.</p>
+                <p className= "bg-[#ffefde] p-2 text-xs rounded-md  text-red-600 text-left">
+                <span className="font-extrabold">PAALALA:</span> <br/>
+                <span className="font-semibold"> Bawal ang T-shirt, Sando, Maong Pants o Shorts, Tsinelas, Hoodie.</span></p>
+              </div>
+            </div>
+            <div>
+              <img src={guest_women} alt='Logo' className='w-60' />
+            </div>
+          </div>
+        }
+
+        {
+          foundInvited.gender === 'male'
+          &&
+          foundInvited.remarks !=='importanteng bisita' 
+            &&
           <div className="flex justify-center gap-3 sm:gap-10 items-start p-5 border-t-2  border-[#e9d2b7]">
             <div className="text-gray-600 w-60 sm:w-80">
               <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
@@ -137,6 +183,8 @@ function Rsvp() {
         {
           foundInvited.gender === 'female'
           &&
+          foundInvited.remarks !=='importanteng bisita' 
+            &&
           <div className="flex justify-center gap-3 sm:gap-10 items-start p-5  border-t-2  border-[#e9d2b7]">
             <div className="text-gray-600 w-60 sm:w-60">
               <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
