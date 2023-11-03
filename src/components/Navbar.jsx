@@ -43,15 +43,15 @@ const Navbar = () => {
             </li>
           </Link>
           <Link to='kulay' smooth={true} duration={500}>
-          <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
-            <span className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
-              Pananamit at RSVP
-            </span>
-          </li>
+            <li className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
+              <span className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                Pananamit at RSVP
+              </span>
+            </li>
           </Link>
-          <li onClick={()=> navigate(`admin`)} className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
-            <span 
-            className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+          <li onClick={() => navigate(`admin`)} className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
+            <span
+              className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
               Admin
             </span>
           </li>
@@ -80,7 +80,7 @@ const Navbar = () => {
       </div>
 
       <div className={nav ? `overflow-hidden fixed z-10 left-0 top-0 w-full h-full backdrop-blur-xl  bg-[#9f7648] ease-in-out duration-300 bg-opacity text-white` : 'z-10 fixed w-[70%] top-0 h-full ease-in-out duration-300  left-[-100%] text-white'}>
-        <div className='flex justify-center items-center  h-screen '>
+        <div className='flex flex-col justify-center gap-32 items-center  h-screen '>
 
           <ul className='text-3xl flex flex-col  gap-8 '>
             <Link to='simbahan' smooth={true} duration={500}>
@@ -103,13 +103,13 @@ const Navbar = () => {
                 Pananamit at RSVP
               </li>
             </Link>
-            <li onClick={handleNav} className=' cursor-pointer  '>
-              <p onClick={()=> navigate(`admin`)}>Admin</p>  
-              </li>
-
 
 
           </ul>
+
+          <div onClick={handleNav} className=' cursor-pointer text-xs text-[#d6b58f] '>
+            <p onClick={() => navigate(`admin`)}>Paula at Julbert</p>
+          </div>
         </div>
 
       </div>
