@@ -180,7 +180,7 @@ function Rsvp() {
                   <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Semi-Formal Attire na Choco Brown ang Kulay.</p>
                   <p className="bg-[#ffefde] p-2 text-[10px] rounded-md  text-red-600 text-left">
                     <span className="font-extrabold">PAALALA:</span> <br />
-                    <span className="font-semibold"> Bawal ang T-shirt, Sando, Maong Pants, Shorts, Tsinelas at Hoodie.</span></p>
+                    <span className="font-semibold"> Bawal ang T-shirt, Sando, Maong Pants, Shorts, Tsinelas o Hoodie.</span></p>
                 </div>
               </div>
               <div>
@@ -201,7 +201,7 @@ function Rsvp() {
                   <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Semi-Formal Attire na Choco Brown ang Kulay.</p>
                   <p className="bg-[#ffefde] p-2 text-[10px] rounded-md  text-red-600 text-left">
                     <span className="font-extrabold">PAALALA:</span> <br />
-                    <span className="font-semibold"> Bawal ang T-shirt, Sando, Maong Pants o Shorts, Tsinelas, Hoodie.</span></p>
+                    <span className="font-semibold"> Bawal ang T-shirt, Sando, Maong Pants, Shorts, Tsinelas o Hoodie.</span></p>
                 </div>
               </div>
               <div>
