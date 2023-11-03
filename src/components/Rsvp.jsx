@@ -178,9 +178,9 @@ function Rsvp() {
                 <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
                 <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
                   <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Semi-Formal Attire na Choco Brown ang Kulay.</p>
-                  <p className="bg-[#ffefde] p-2 text-xs rounded-md  text-red-600 text-left">
+                  <p className="bg-[#ffefde] p-2 text-[10px] rounded-md  text-red-600 text-left">
                     <span className="font-extrabold">PAALALA:</span> <br />
-                    <span className="font-semibold"> Bawal ang T-shirt, Sando, Maong Pants o Shorts, Tsinelas, Hoodie.</span></p>
+                    <span className="font-semibold"> Bawal ang T-shirt, Sando, Maong Pants, Shorts, Tsinelas at Hoodie.</span></p>
                 </div>
               </div>
               <div>
@@ -199,7 +199,7 @@ function Rsvp() {
                 <h1 className="text-sm">Ito po ang inyong dapat isuot sa kasal.</h1>
                 <div className="flex flex-col gap-2 mt-3 text-[#a37138] text-center text-xs sm:text-sm">
                   <p className="bg-[#7b3f00] p-2 rounded-md text-gray-300">Semi-Formal Attire na Choco Brown ang Kulay.</p>
-                  <p className="bg-[#ffefde] p-2 text-xs rounded-md  text-red-600 text-left">
+                  <p className="bg-[#ffefde] p-2 text-[10px] rounded-md  text-red-600 text-left">
                     <span className="font-extrabold">PAALALA:</span> <br />
                     <span className="font-semibold"> Bawal ang T-shirt, Sando, Maong Pants o Shorts, Tsinelas, Hoodie.</span></p>
                 </div>
