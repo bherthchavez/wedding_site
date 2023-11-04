@@ -39,7 +39,6 @@ function InvitedList() {
           return c-d
         })
         setInvited(filterByDate)
-        console.log(filterByDate)
 
       } catch (error) {
         console.log('Error fetching data:', error);
