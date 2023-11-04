@@ -25,7 +25,6 @@ function Rsvp() {
   };
   
   const formattedDate = now.toLocaleString('en-US', options);
-  console.log(formattedDate);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [foundInvited, setFoundInvited] = useState([])
