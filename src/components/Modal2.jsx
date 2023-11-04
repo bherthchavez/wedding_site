@@ -30,13 +30,6 @@ function Modal2({ isOpen, onClose, children, notAttending }) {
           :`Mag Exit`
           }
            
-            {/* <button
-              type="button"
-              className="h-9 w-full flex justify-center items-center rounded-md border border-transparent shadow-sm px-3 sm:px-4 py-1 bg-[#724526] text-base text-[#d4bfb2] hover:bg-[#ddc1a1]"
-              onClick={onOk}
-            >
-              
-            </button> */}
           </div>
         </div>
       </div>

@@ -7,8 +7,6 @@ const Entourage = () => {
     return (
         <section name='pamunuan' className="bg-[#f1f0e3] py-5 sm:py-10 font-sans">
             <div  className="container flex flex-col justify-center p-8 gap-10 mx-auto md:p-8 max-w-[1200px]">
-                {/* <p className="p-2 text-sm font-medium tracki text-center uppercase">How it works</p> */}
-                {/* <h2 className="mb-12 text-4xl font-bold leadi text-center sm:text-5xl">Pamunuan</h2> */}
                 <div className='relative'>
                     <div className='text-[#4e4e4e]  text-left text-[55px] sm:text-[65px] leading-[63px] '>
                         Pamunuan
@@ -17,11 +15,8 @@ const Entourage = () => {
                 </div>
 
                 <div className="grid gap-10 md:gap-8 px-8 sm:p-3 md:grid-cols-2 lg:px-12 xl:px-32">
-
                     <div className="flex flex-col gap-2 justify-center items-center">
                         <h3 className=" text-3xl sm:text-4xl text-[#9f7648] text-center mb-2 sm:mb-3">Abay na Pandangal</h3>
-                        {/* <p className="mt-1 dark:text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, fugit? Aspernatur, ullam enim, odit eaque quia rerum ipsum voluptatem consequatur ratione, doloremque debitis? Fuga labore omnis minima, quisquam delectus culpa!</p> */}
-
                         <div className="flex flex-col justify-center items-center">
                             <img src={pam} alt=""
                                 className="w-28 h-28 grayscale mx-auto sm:mx-0 rounded-full dark:bg-gray-500 aspect-square" />
@@ -176,7 +171,7 @@ const Entourage = () => {
                                     <div className="flex flex-col">
                                         <p className="text-[#9f7648] text-base  font-semibold ">Munting Abay</p>
                                         <h2 className="pl-2">Lyka Joyce Lazana</h2>
-                                        <h2 className="pl-2">Joanna Marie Lazana</h2>
+                                        <h2 className="pl-2">Jhoanna Marie Lazana</h2>
                                         <h2 className="pl-2">Aleksandrei Miles R. Alibusa</h2>
                                     </div>
                                 </div>
