@@ -7,6 +7,8 @@ import { FiRefreshCw } from "react-icons/fi";
 function InvitedList() {
 
   const [invited, setInvited] = useState([])
+  const [filteredInvited, setFilteredInvited] = useState([])
+  const [filterByStatus, setFilterByStatus] = useState(false)
   const [addInv, setAddInv] = useState(false)
   const [editInv, setEditInv] = useState(false)
   const [pass, setPass] = useState(false)
@@ -33,12 +35,13 @@ function InvitedList() {
       try {
         const result = await getInvited()
         const filterdByStatus = result.sort((a, b) => a.status > b.status ? 1 : -1)
-        const filterByDate = filterdByStatus.sort((a,b)=>{
+        const filterByDate = filterdByStatus.sort((a, b) => {
           let c = new Date(a.updatedDate)
           let d = new Date(b.updatedDate)
-          return c-d
+          return c - d
         })
         setInvited(filterByDate)
+        setFilteredInvited(filterByDate)
 
       } catch (error) {
         console.log('Error fetching data:', error);
@@ -136,6 +139,16 @@ function InvitedList() {
     }
   }
 
+  const filteredByStatus = (status) => {
+    setFilterByStatus(true)
+
+    setFilteredInvited(invited)
+
+    setFilteredInvited(invited.filter(inv => inv.status === status))
+
+
+  }
+
   return (
     <section name='Kulay' className="flex flex-col justify-between bg-custom2 bg-local bg-[#f1f0e3] h-screen bg-center bg-cover font-sans">
 
@@ -164,11 +177,11 @@ function InvitedList() {
                   <p onClick={() => setRefetchTrigger(prev => !prev)}
                     className="cursor-pointer hover:text-[#b97b33] p-2 rounded-full bg-[#f5d3ad] text-[#b97b33] shadow-sm">
                     <FiRefreshCw /></p>
-                  <p className="text-xs">A  <span className="text-green-700  text-sm">{invited.filter(inv => inv.status === 'attending').length}</span></p>
-                  <p className="text-xs">N <span className="text-red-700  text-sm">{invited.filter(inv => inv.status === 'not attending').length}</span></p>
-                  <p className="text-xs">P <span className="text-orange-700  text-sm">{invited.filter(inv => inv.status === 'pending').length}</span></p>
-                  <p className="text-xs">T <span className="text-blue-700  text-xs">{invited.length}</span></p>
-                  
+                  <p onClick={() => filteredByStatus('attending')} className="text-xs cursor-pointer">A  <span className="text-green-700  text-sm">{invited.filter(inv => inv.status === 'attending').length}</span></p>
+                  <p onClick={() => filteredByStatus('not attending')} className="text-xs cursor-pointer">N <span className="text-red-700  text-sm">{invited.filter(inv => inv.status === 'not attending').length}</span></p>
+                  <p onClick={() => filteredByStatus('pending')} className="text-xs cursor-pointer">P <span className="text-orange-700  text-sm">{invited.filter(inv => inv.status === 'pending').length}</span></p>
+                  <p onClick={() => setFilterByStatus(false)} className="text-xs cursor-pointer">T <span className="text-blue-700  text-xs">{invited.length}</span></p>
+
                 </div>
                 {editInv
                   ?
@@ -341,8 +354,8 @@ function InvitedList() {
 
                         <tbody className="divide-y divide-gray-200 text-gray-700">
 
-                          {invited
-                            ? invited.map(inv => (
+                          {invited && !filterByStatus
+                            && invited.map(inv => (
                               <tr
                                 onClick={() => invEdit(inv.id)}
                                 className="hover:bg-[#ffe9d3] cursor-pointer" key={inv.id}>
@@ -357,10 +370,23 @@ function InvitedList() {
                                 <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.gender}</td>
                               </tr>
                             ))
-
-
-                            :
-                            <span>No Invited</span>
+                          }
+                          {invited && filterByStatus
+                            && filteredInvited.map(inv => (
+                              <tr
+                                onClick={() => invEdit(inv.id)}
+                                className="hover:bg-[#ffe9d3] cursor-pointer" key={inv.id}>
+                                <td className="whitespace-nowrap px-4 py-2 font-medium capitalize">
+                                  {inv.first_name}  {inv.last_name}
+                                </td>
+                                <td className={inv.status.toLowerCase() == 'attending' ? `whitespace-nowrap px-4 py-2 capitalize text-green-600 font-semibold` : inv.status.toLowerCase() == 'not attending' ? `whitespace-nowrap px-4 py-2 capitalize text-red-600 font-semibold` : `whitespace-nowrap px-4 py-2 capitalize text-orange-600 font-semibold`}>
+                                  {inv.status}
+                                </td>
+                                <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.updatedDate}</td>
+                                <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.remarks}</td>
+                                <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.gender}</td>
+                              </tr>
+                            ))
                           }
 
 
@@ -369,7 +395,7 @@ function InvitedList() {
                           <tr>
 
                             <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                              Name <span className="text-xs text-gray-300 ml-1">( {invited.length} )</span>
+                              Name
                             </th>
                             <th className="whitespace-nowrap px-4 py-2 font-medium ">
                               Status
