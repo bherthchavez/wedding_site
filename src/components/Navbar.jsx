@@ -2,12 +2,12 @@
 import { useState } from 'react';
 import pg2 from '../assets/pj2.png'
 import { Link } from 'react-scroll';
-import { useNavigate } from 'react-router-dom';
-import { MdOutlineDashboardCustomize } from "react-icons/md";
+// import { useNavigate } from 'react-router-dom';
+// import { MdOutlineDashboardCustomize } from "react-icons/md";
 
 
 const Navbar = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
@@ -51,12 +51,12 @@ const Navbar = () => {
               </span>
             </li>
           </Link>
-          <li onClick={() => navigate(`admin`)} className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
+          {/* <li onClick={() => navigate(`admin`)} className='p-2 group transition-all duration-300 ease-in-out cursor-pointer'>
             <span
               className='w-full tracking-widest  text-md text-[#fef1e2] cursor-pointer bg-left-bottom bg-gradient-to-r from-[#fef1e2] to-[#fef1e2] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
               <MdOutlineDashboardCustomize />
             </span>
-          </li>
+          </li> */}
         </ul>
 
         {/* Humberger */}
@@ -110,7 +110,7 @@ const Navbar = () => {
           </ul>
 
           <div onClick={handleNav} className=' cursor-pointer text-xs text-[#d6b58f] '>
-            <p onClick={() => navigate(`admin`)}>Paula at Julbert</p>
+            <p>Paula at Julbert</p>
           </div>
         </div>
 
