@@ -32,8 +32,14 @@ function InvitedList() {
     const fetchInvited = async () => {
       try {
         const result = await getInvited()
-        const filterdByStatus = result.sort((a,b)=> a.status > b.status ? 1 : -1)
-        setInvited(filterdByStatus)
+        const filterdByStatus = result.sort((a, b) => a.status > b.status ? 1 : -1)
+        const filterByDate = filterdByStatus.sort((a,b)=>{
+          let c = new Date(a.updatedDate)
+          let d = new Date(b.updatedDate)
+          return c-d
+        })
+        setInvited(filterByDate)
+        console.log(filterByDate)
 
       } catch (error) {
         console.log('Error fetching data:', error);
@@ -44,10 +50,8 @@ function InvitedList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refetchTrigger])
 
- 
-
   const saveInv = () => {
-    if( details.first_name && details.last_name && details.status && details.gender ){
+    if (details.first_name && details.last_name && details.status && details.gender) {
 
       firebase
         .firestore().collection('invited')
@@ -62,7 +66,7 @@ function InvitedList() {
     }
   }
   const updateInv = () => {
-    if( details.first_name && details.last_name && details.status && details.gender ){
+    if (details.first_name && details.last_name && details.status && details.gender) {
 
       firebase
         .firestore().collection('invited')
@@ -78,45 +82,45 @@ function InvitedList() {
     }
   }
 
-  const checkPass = ()=>{
-    if(password.toLowerCase() === 'chochotaba'){
+  const checkPass = () => {
+    if (password.toLowerCase() === 'chochotaba') {
       setPass(prev => !prev)
       setPassword("")
       setWrongPassword("")
-    }else{
+    } else {
       setWrongPassword("Wrong passcode!")
     }
-    
-    
+
+
   }
 
-  const invEdit =(id)=>{
-      
+  const invEdit = (id) => {
 
-      const existing = invited.find(inv=> inv.id === id)
-      if(existing){
-        setDetails(existing)
-        setEditInv(prev=> !prev)
-        console.log(existing)
-      }
+
+    const existing = invited.find(inv => inv.id === id)
+    if (existing) {
+      setDetails(existing)
+      setEditInv(prev => !prev)
+      console.log(existing)
+    }
   }
 
-const cancelUpdateAdd = ()=>{
-  setAddInv(false)
-  setEditInv(false)
-  setDetails({
-    first_name: '',
-    last_name: '',
-    status: '',
-    gender: '',
-    remarks: ''
-  })
-}
+  const cancelUpdateAdd = () => {
+    setAddInv(false)
+    setEditInv(false)
+    setDetails({
+      first_name: '',
+      last_name: '',
+      status: '',
+      gender: '',
+      remarks: ''
+    })
+  }
 
-const deleteInv =()=>{
-  if (confirm(`Are You Sure You want to Delete! ${details.first_name} ${details.last_name}`)) {
-    console.log("Deleted")
-    firebase
+  const deleteInv = () => {
+    if (confirm(`Are You Sure You want to Delete! ${details.first_name} ${details.last_name}`)) {
+      console.log("Deleted")
+      firebase
         .firestore().collection('invited')
         .doc(details.id)
         .delete()
@@ -127,20 +131,20 @@ const deleteInv =()=>{
         }).catch((error) => {
           console.log(error.message)
         });
-    
-  } else {
-    console.log("Cancel")
+
+    } else {
+      console.log("Cancel")
+    }
   }
-}
 
   return (
     <section name='Kulay' className="flex flex-col justify-between bg-custom2 bg-local bg-[#f1f0e3] h-screen bg-center bg-cover font-sans">
 
-      <div className="container flex flex-col p-8 gap-3 sm:gap-5 mx-auto md:p-8 max-w-[1200px]">
+      <div className="container flex flex-col p-8 gap-2 sm:gap-2 mx-auto md:p-8 max-w-[1200px]">
         <div className='flex flex-col justify-center items-center'>
-          <div className="flex flex-col justify-center items-center text-[#745129] mb-4 text-xs gap-1 italic">
+          <div className="flex flex-col justify-center items-center text-[#745129] text-xs gap-1 italic">
             <a href='/' className="cursor-pointer">
-              <img src={pg} alt='Logo' className='w-20' />
+              <img src={pg} alt='Logo' className='w-14 sm:w-16' />
             </a>
             <span>Disyembre  3, 2023</span>
           </div>
@@ -149,21 +153,34 @@ const deleteInv =()=>{
           pass
             ?
             <>
-              <div className='text-[#727171] flex flex-col sm:flex-row justify-center items-center gap-5 sm:gap-10  text-center text-[20px] sm:text-[25px] leading-7 sm:leading-[43px] '>
-                <div className="flex justify-between items-center gap-2"> 
-                <p onClick={()=> setRefetchTrigger(prev => !prev)} className="cursor-pointer hover:text-[#b97b33]"><FiRefreshCw/></p> 
-                <p>Listahan ng Inbitado sa Kasal</p> 
+              <div className='text-[#727171] flex flex-col sm:flex-row justify-center items-center  text-center text-[15px] sm:text-[20px] leading-7 sm:leading-[43px] '>
+                <div className="flex justify-between items-center">
+                  <p>Listahan ng Inbitado sa Kasal</p>
                 </div>
-               {editInv
-               ?
-               <div className="flex justify-center items-center gap-3">
-                  <button
-                    onClick={cancelUpdateAdd}
-                    className={!editInv ? `py-2 px-4 text-sm rounded-md  bg-[#db9b51] hover:bg-[#b97b33] text-white shadow-md` : `py-2 px-7 text-sm bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`}>
-                    Cancel
-                  </button>
 
+              </div>
+
+              <div className=" py-2 px-3 flex flex-col sm:flex-row gap-3 justify-between items-center ">
+                <div className="flex gap-5 sm:gap-8 items-center font-bold text-gray-700">
+                  <p onClick={() => setRefetchTrigger(prev => !prev)}
+                    className="cursor-pointer hover:text-[#b97b33] p-2 rounded-full bg-[#f5d3ad] text-[#b97b33] shadow-sm">
+                    <FiRefreshCw /></p>
+                  <p className="text-xs">A  <span className="text-green-700  text-sm">{invited.filter(inv => inv.status === 'attending').length}</span></p>
+                  <p className="text-xs">N <span className="text-red-700  text-sm">{invited.filter(inv => inv.status === 'not attending').length}</span></p>
+                  <p className="text-xs">P <span className="text-orange-700  text-sm">{invited.filter(inv => inv.status === 'pending').length}</span></p>
+                  <p className="text-xs">T <span className="text-blue-700  text-xs">{invited.length}</span></p>
                   
+                </div>
+                {editInv
+                  ?
+                  <div className="flex justify-center items-center gap-3">
+                    <button
+                      onClick={cancelUpdateAdd}
+                      className={!editInv ? `py-2 px-4 text-sm rounded-md  bg-[#db9b51] hover:bg-[#b97b33] text-white shadow-md` : `py-2 px-7 text-sm bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`}>
+                      Cancel
+                    </button>
+
+
                     <button
                       onClick={updateInv}
                       className="py-2 px-4 text-sm rounded-md  bg-blue-800 hover:bg-[#b97b33] text-white shadow-md">
@@ -174,31 +191,32 @@ const deleteInv =()=>{
                       className="py-2 px-4 text-sm rounded-md  bg-red-700 hover:bg-[#b97b33] text-white shadow-md">
                       Delete
                     </button>
-                  
-                </div>
-               :
-                <div className="flex justify-center items-center gap-6">
-                  <button
-                    onClick={()=> setAddInv(prev=>!prev)}
-                    className={!addInv ? `py-2 px-7 text-sm rounded-md  bg-[#db9b51] hover:bg-[#b97b33] text-white shadow-md` : `py-2 px-7 text-sm bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`}>
-                    {addInv ? 'Cancel' : 'Add'}
-                  </button>
 
-                  {addInv
-                    &&
+                  </div>
+                  :
+                  <div className="flex justify-center items-center gap-6">
                     <button
-                      onClick={saveInv}
-                      className="py-2 px-7 text-sm rounded-md  bg-green-700 hover:bg-[#b97b33] text-white shadow-md">
-                      Save
+                      onClick={() => setAddInv(prev => !prev)}
+                      className={!addInv ? `py-2 px-7 text-sm rounded-md  bg-[#db9b51] hover:bg-[#b97b33] text-white shadow-md` : `py-2 px-7 text-sm bg-transparent border-2 border-gray-500 rounded-md text-gray-600 hover:bg-[#db9b51] hover:text-white hover:border-none hover:shadow-md`}>
+                      {addInv ? 'Cancel' : 'Add'}
                     </button>
-                  }
-                </div>
-               }
 
+                    {addInv
+                      &&
+                      <button
+                        onClick={saveInv}
+                        className="py-2 px-7 text-sm rounded-md  bg-green-700 hover:bg-[#b97b33] text-white shadow-md">
+                        Save
+                      </button>
+                    }
+                  </div>
+                }
               </div>
-              <div className="flex flex-col items-center justify-center gap-5">
 
-                <div className="overflow-x-auto h-[330px] sm:h-96 w-[300px] sm:w-[700px]  rounded-lg border border-gray-200 bg-white">
+              <div className="flex flex-col items-center justify-center">
+                <div className="overflow-x-auto h-[330px] sm:h-[400px] w-[300px] sm:w-full  rounded-lg border border-gray-200 bg-white">
+
+
                   {addInv || editInv
                     ?
                     <div className="min-w-full p-5 sm:p-10 flex flex-col justify-center items-center gap-3">
@@ -256,8 +274,8 @@ const deleteInv =()=>{
                         >
                           <option value="">Status</option>
                           <option value="pending">Pending</option>
-                          <option  value="attending" >Attending</option>
-                          <option  value="not attending" >Not Attending</option>
+                          <option value="attending" >Attending</option>
+                          <option value="not attending" >Not Attending</option>
                         </select>
                       </div>
                       <div className="w-full">
@@ -297,84 +315,82 @@ const deleteInv =()=>{
                       </label>
                     </div>
                     :
-                    <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-                      <thead className="text-left bg-[#bd874e] text-white ">
-                        <tr>
-                          
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Name <span className="text-xs text-gray-300 ml-1">( {invited.length} )</span>
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Status
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Confirm Date
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Remarks
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Gender
-                          </th>
-                         
-                        </tr>
-                      </thead>
+                    <>
 
-                      <tbody className="divide-y divide-gray-200 text-gray-700">
+                      <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                        <thead className="text-left bg-[#bd874e] text-white ">
+                          <tr>
 
-                        {invited
-                          ? invited.map(inv => (
-                            <tr 
-                             onClick={()=> invEdit(inv.id)}
-                            className="hover:bg-[#ffe9d3] cursor-pointer" key={inv.id}>
-                              {/* <td className="whitespace-nowrap px-2 py-2 font-medium capitalize">
-                                <button
-                                onClick={()=> invEdit(inv.id)}
-                                 className="p-2 text-xs rounded bg-[#ffe4c7] text-gray-600">Edit</button>
-                              </td> */}
-                              <td className="whitespace-nowrap px-4 py-2 font-medium capitalize">
-                                {inv.first_name}  {inv.last_name}
-                              </td>
-                              <td className={inv.status.toLowerCase() == 'attending' ? `whitespace-nowrap px-4 py-2 capitalize text-green-600 font-semibold` : inv.status.toLowerCase() == 'not attending' ? `whitespace-nowrap px-4 py-2 capitalize text-red-600 font-semibold` : `whitespace-nowrap px-4 py-2 capitalize text-orange-600 font-semibold`}>
-                                {inv.status}
-                              </td>
-                              <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.updatedDate}</td>
-                              <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.remarks}</td>
-                              <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.gender}</td>
-                            </tr>
-                          ))
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Name
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Status
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Confirm Date
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Remarks
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Gender
+                            </th>
+
+                          </tr>
+                        </thead>
+
+                        <tbody className="divide-y divide-gray-200 text-gray-700">
+
+                          {invited
+                            ? invited.map(inv => (
+                              <tr
+                                onClick={() => invEdit(inv.id)}
+                                className="hover:bg-[#ffe9d3] cursor-pointer" key={inv.id}>
+                                <td className="whitespace-nowrap px-4 py-2 font-medium capitalize">
+                                  {inv.first_name}  {inv.last_name}
+                                </td>
+                                <td className={inv.status.toLowerCase() == 'attending' ? `whitespace-nowrap px-4 py-2 capitalize text-green-600 font-semibold` : inv.status.toLowerCase() == 'not attending' ? `whitespace-nowrap px-4 py-2 capitalize text-red-600 font-semibold` : `whitespace-nowrap px-4 py-2 capitalize text-orange-600 font-semibold`}>
+                                  {inv.status}
+                                </td>
+                                <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.updatedDate}</td>
+                                <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.remarks}</td>
+                                <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.gender}</td>
+                              </tr>
+                            ))
 
 
-                          :
-                          <span>No Invited</span>
-                        }
+                            :
+                            <span>No Invited</span>
+                          }
 
 
-                      </tbody>
-                      <thead className="text-left bg-[#bd874e] text-white ">
-                        <tr>
-                          
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Name <span className="text-xs text-gray-300 ml-1">( {invited.length} )</span>
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Status
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Confirm Date
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Remarks
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 font-medium ">
-                            Gender
-                          </th>
-                         
-                        </tr>
-                      </thead>
-                   
-                    </table>
-                 
+                        </tbody>
+                        <thead className="text-left bg-[#bd874e] text-white ">
+                          <tr>
+
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Name <span className="text-xs text-gray-300 ml-1">( {invited.length} )</span>
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Status
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Confirm Date
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Remarks
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Gender
+                            </th>
+
+                          </tr>
+                        </thead>
+
+                      </table>
+                    </>
+
                   }
                 </div>
 
