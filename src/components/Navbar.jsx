@@ -109,7 +109,7 @@ const Navbar = () => {
 
           </ul>
 
-          <div onClick={handleNav} className=' cursor-pointer text-xs text-[#d6b58f] '>
+          <div className=' cursor-pointer text-xs text-[#d6b58f] '>
             <p>Paula at Julbert</p>
           </div>
         </div>
