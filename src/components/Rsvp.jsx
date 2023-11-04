@@ -14,6 +14,19 @@ function Rsvp() {
   const params = useParams()
   const navigate = useNavigate()
 
+  const now = new Date();
+  const options = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  };
+  
+  const formattedDate = now.toLocaleString('en-US', options);
+  console.log(formattedDate);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [foundInvited, setFoundInvited] = useState([])
   const [btnStatus, setBtnStatus] = useState("")
@@ -47,7 +60,7 @@ function Rsvp() {
     firebase
       .firestore().collection('invited')
       .doc(params.id)
-      .update({ status: "attending" })
+      .update({ status: "attending", updatedDate: formattedDate })
       .then(() => {
         setRefetchTrigger(prev => !prev)
         setIsModalOpen(prev => !prev)
@@ -61,7 +74,7 @@ function Rsvp() {
     firebase
       .firestore().collection('invited')
       .doc(params.id)
-      .update({ status: "not attending" })
+      .update({ status: "not attending", updatedDate: formattedDate})
       .then(() => {
         setRefetchTrigger(prev => !prev)
         setIsModalOpen(prev => !prev)
@@ -80,6 +93,8 @@ function Rsvp() {
       navigate(`/`)
     }
   }
+
+
 
   return (
     <>
