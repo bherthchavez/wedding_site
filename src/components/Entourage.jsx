@@ -110,7 +110,7 @@ const Entourage = () => {
                                     <h2 className="mt-3 sm:hidden">Mrs. Helen Kung</h2>
                                     <h2 className="sm:hidden">Mr. Manny Kung</h2>
                                     <h2 className="mt-3 sm:hidden">Mrs. Mary Jane Silverio </h2>
-                                    <h2 className="sm:hidden">Mr. Rogel Silverio</h2>
+                                    <h2 className="sm:hidden">Mr. Rogelio Silverio</h2>
                                 </div>
                             </div>
                         </div>
