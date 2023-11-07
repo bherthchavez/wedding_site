@@ -345,9 +345,9 @@ function InvitedList() {
                           value={details.side}
                         >
                           <option value="">Side</option>
-                          <option value="Paula" >Paula</option>
-                          <option value="Berth" >Berth</option>
-                          <option value="Both" >Both</option>
+                          <option value="paula" >Paula</option>
+                          <option value="berth" >Berth</option>
+                          <option value="both" >Both</option>
                         </select>
                       </div>
                     </div>
