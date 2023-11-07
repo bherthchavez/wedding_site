@@ -412,6 +412,7 @@ function InvitedList() {
                                   {inv.status}
                                 </td>
                                 <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.updatedDate}</td>
+                                <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.side}</td>
                                 <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.remarks}</td>
                                 <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.gender}</td>
                               </tr>
