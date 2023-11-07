@@ -23,7 +23,8 @@ function InvitedList() {
       last_name: '',
       status: '',
       gender: '',
-      remarks: ''
+      remarks: '',
+      side: ''
     }
   )
 
@@ -144,7 +145,14 @@ function InvitedList() {
 
     setFilteredInvited(invited)
 
-    setFilteredInvited(invited.filter(inv => inv.status === status))
+    if(status=== 'attending' || status=== 'not attending' ||status=== 'pending' ){
+
+      setFilteredInvited(invited.filter(inv => inv.status === status))
+    }else{
+      
+      setFilteredInvited(invited.filter(inv => inv.side === status))
+    }
+
 
 
   }
@@ -173,7 +181,7 @@ function InvitedList() {
               </div>
 
               <div className=" py-2 px-3 flex flex-col sm:flex-row gap-3 justify-between items-center ">
-                <div className="flex gap-5 sm:gap-8 items-center font-bold text-gray-700">
+                <div className="flex gap-5 sm:gap-8 items-center font-bold text-gray-500">
                   <p onClick={() => setRefetchTrigger(prev => !prev)}
                     className="cursor-pointer hover:text-[#b97b33] p-2 rounded-full bg-[#f5d3ad] text-[#b97b33] shadow-sm">
                     <FiRefreshCw /></p>
@@ -181,6 +189,9 @@ function InvitedList() {
                   <p onClick={() => filteredByStatus('not attending')} className="text-xs cursor-pointer">N <span className="text-red-700  text-sm">{invited.filter(inv => inv.status === 'not attending').length}</span></p>
                   <p onClick={() => filteredByStatus('pending')} className="text-xs cursor-pointer">P <span className="text-orange-700  text-sm">{invited.filter(inv => inv.status === 'pending').length}</span></p>
                   <p onClick={() => setFilterByStatus(false)} className="text-xs cursor-pointer">T <span className="text-blue-700  text-xs">{invited.length}</span></p>
+                  <p onClick={() => filteredByStatus('both')} className="text-xs cursor-pointer">SBH <span className="text-pink-700">{invited.filter(inv => inv.side === 'both').length}</span></p>
+                  <p onClick={() => filteredByStatus('paula')} className="text-xs cursor-pointer">SP <span className="text-indigo-700  text-sm">{invited.filter(inv => inv.side === 'paula').length}</span></p>
+                  <p onClick={() => filteredByStatus('berth')} className="text-xs cursor-pointer">SB <span className="text-purple-700  text-sm">{invited.filter(inv => inv.side === 'berth').length}</span></p>
 
                 </div>
                 {editInv
@@ -325,6 +336,20 @@ function InvitedList() {
                           Remarks
                         </span>
                       </label>
+                      <div className="w-full">
+                        <select
+                          name="Side"
+                          id="Side"
+                          className="mt-1.5 w-full uppercase tracking-widest  text-gray-700 sm:text-sm rounded-md border-2 border-gray-500 px-3 py-3 shadow-sm focus-within:border-[#f7ce9f] focus-within:ring-1 focus-within:ring-[#916533]"
+                          onChange={(e) => setDetails({ ...details, side: e.target.value.toLowerCase() })}
+                          value={details.side}
+                        >
+                          <option value="">Side</option>
+                          <option value="Paula" >Paula</option>
+                          <option value="Berth" >Berth</option>
+                          <option value="Both" >Both</option>
+                        </select>
+                      </div>
                     </div>
                     :
                     <>
@@ -341,6 +366,9 @@ function InvitedList() {
                             </th>
                             <th className="whitespace-nowrap px-4 py-2 font-medium ">
                               Confirm Date
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Side
                             </th>
                             <th className="whitespace-nowrap px-4 py-2 font-medium ">
                               Remarks
@@ -366,6 +394,7 @@ function InvitedList() {
                                   {inv.status}
                                 </td>
                                 <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.updatedDate}</td>
+                                <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.side}</td>
                                 <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.remarks}</td>
                                 <td className="whitespace-nowrap px-4 py-2 capitalize">{inv.gender}</td>
                               </tr>
@@ -402,6 +431,9 @@ function InvitedList() {
                             </th>
                             <th className="whitespace-nowrap px-4 py-2 font-medium ">
                               Confirm Date
+                            </th>
+                            <th className="whitespace-nowrap px-4 py-2 font-medium ">
+                              Side
                             </th>
                             <th className="whitespace-nowrap px-4 py-2 font-medium ">
                               Remarks
