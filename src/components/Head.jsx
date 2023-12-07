@@ -134,7 +134,7 @@ const Head = () => {
               <div className='px-14 mt-2'>
                   <div className='text-[#b89e81]  text-center font-serif text-lg leading-8 '>
                     {distanceToDate < 0 ?
-                      'Wedding Day!!'
+                      'We Got Married !!'
                       :
                       'Linggo, Disyembre  3, 2023'
                     }
